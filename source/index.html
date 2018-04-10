@@ -7,13 +7,16 @@
   </head>
   <body>
     <!-- HEADER -->
-    <header>
+    <header class="header">
+      <!-- main-nav -->
       <nav class="main-nav">
+        <!-- logo -->
         <a class="main-nav__logo logo">
           <img class="logo-image" src="" alt="Логотип Cat Energy">
         </a>
         <!-- Какое-то двойное лого тут. Пока не понятно. -->
         <button class="main-nav__button burger-button"></button>
+        <!-- main-menu -->
         <ul class="main-nav__main-menu main-menu">
           <li class="main-menu__item">
             <a class="main-menu__link" href="#">Главная</a>
@@ -41,7 +44,8 @@
       <section class="programs">
         <h2 class="visuallyhidden">Диетические программы для Вашего кота</h2>
         <ul class="programs__list">
-          <li class="programs__item program">
+          <!-- program -->
+          <li class="programs__item program program--slim">
             <h3 class="program__title">Похудение</h3>
             <p class="program__description">
               Ваш кот весит больше собаки и почти утратил способность лазить по деревьям?
@@ -49,7 +53,8 @@
             </p>
             <a class="program__link">Каталог Slim</a>
           </li>
-          <li class="programs__item program">
+          <!-- program -->
+          <li class="programs__item program program--pro">
             <h3 class="program__title">Набор массы</h3>
             <p class="program__description">
                 Заработать авторитет среди дворовых котов и даже собак? Серия Cat Energy Pro
@@ -85,6 +90,7 @@
           Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек
           и по-прежнему спит по 16 часов в день.
         </p>
+        <!-- result -->
         <ul class="example__result result">
           <li class="result__item">
             <span class="result__resource">5 кг</span>
@@ -98,6 +104,7 @@
         <p class="example__costs">Затраты на питание: 15 000 руб.</p>
         <img class="example__image example__image--before" src="" alt="Кот Борис до диеты">
         <img class="example__image example__image--after" src="" alt="Кот Борис после диеты">
+        <!-- toggle -->
         <div class="example__toggle toggle">
           <span class="toggle__label toggle__label--before">Было</span>
           <div class="toggle__range">
@@ -116,6 +123,7 @@
           <span class="location__address street-address">ул. Большая Конюшенная, д. 19/8</span>
           <span class="location__city locality">Санкт-Петербург</span>
         </p>
+        <!-- map -->
         <div class="contacts__map map">
           <img class="map__image" src="" alt="ул. Большая Конюшенная, д. 19/8  Санкт-Петербург">
           <!-- тут будет iframe -->
@@ -125,6 +133,7 @@
     <!-- FOOTER -->
     <footer class="footer">
       <img class="footer__logo" src="" alt="Логотип Cat Energy">
+      <!-- social-nav -->
       <ul class="footer__social social-nav">
         <li class="social-nav__item">
           <a class="social-nav__link social-nav__link--vk" href="https://vk.com/htmlacademy" target="_blank">vkontakte</a>
@@ -136,6 +145,7 @@
           <a class="social-nav__link social-nav__link--facebook" href="https://www.facebook.com/htmlacademy/" target="_blank">facebook</a>
         </li>
       </ul>
+      <!-- academy -->
       <div class="footer__academy academy">
         <span class="academy__name">HTML Academy</span>
         <a class="academy__link" href="">
