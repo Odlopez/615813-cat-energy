@@ -1,7 +1,8 @@
 # Личный проект «Кэт энерджи» [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
 
+
 * Студент: [Александр Палкин](https://up.htmlacademy.ru/adaptive/14/user/615813).
-* Наставник: `Неизвестно`.
+* Наставник: [Сергей Рубец](https://up.htmlacademy.ru/adaptive/14/user/41580).
 
 ---
 
