@@ -1,0 +1,27 @@
+.main-menu {
+  margin: 0;
+  padding: 0;
+  display: none;
+  list-style: none;
+  font-weight: 500;
+  text-transform: uppercase;
+
+  &:target {
+    display: block;
+  }
+}
+
+.main-menu__item {
+  display: flex;
+  min-height: 66px;
+
+  border-bottom: 1px solid rgb(230, 230, 230);
+}
+
+.main-menu__link {
+  margin: auto;
+
+  font-size: 20px;
+  line-height: 1;
+  color: rgb(17, 17, 17);
+}
