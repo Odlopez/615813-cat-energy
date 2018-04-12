@@ -14,8 +14,8 @@
     top: 50%;
     left: 0;
 
-    width: 40px;
-    height: 40px;
+    width: 30px;
+    height: 30px;
 
     border: 1px solid rgb(205, 205, 205);
     transform: translateY(-50%);
@@ -25,16 +25,17 @@
     content: "";
     position: absolute;
     top: 50%;
-    left: 18px;
+    left: 13px;
 
     width: 14px;
     height: 8px;
 
-    border-left: 2px solid rgb(104, 183, 56);
     border-bottom: 2px solid rgb(104, 183, 56);
-    transform: translateY(-50%) scale(0) rotate(45deg);
-    transition: all 0.2s ease-in;
+    border-left: 2px solid rgb(104, 183, 56);
+    transform: translateY(-50%) scale(0) rotate(-45deg);
     transform-origin: left bottom;
+
+    transition: all 0.1s ease-in;
   }
 
   &:hover::before,
@@ -49,5 +50,9 @@
 }
 
 input[type="checkbox"]:checked + .extra-product-form__label::after {
-  transform:  translateY(-50%) scale(1) rotate(-45deg);
+  transform: translateY(-50%) scale(1) rotate(-45deg);
+}
+
+input[type="checkbox"]:focus + .extra-product-form__label::before {
+  outline: 1px solid  rgb(77, 144, 254);
 }
