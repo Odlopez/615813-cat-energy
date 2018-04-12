@@ -3,19 +3,29 @@
   flex-direction: column;
   align-items: flex-start;
   margin-top: 20px;
-  padding: 20px;
+  padding: 29px 20px;
 
   color: rgb(17, 17, 17);
 
   background-color: rgb(242, 242, 242);
+  background-repeat: no-repeat;
+  background-origin: content-box;
+
+  &--slim {
+    background-image: url("../img/slim.png");
+  }
+  &--pro {
+    background-image: url("../img/pro.png");
+  }
 }
 
 .program__title {
-  align-self: center;
+  margin-top: 10px;
+  margin-left: 72px;
 
   font-weight: 400;
   font-size: 24px;
-  line-height: 60px;
+  line-height: 37px;
   text-transform: uppercase;
 }
 

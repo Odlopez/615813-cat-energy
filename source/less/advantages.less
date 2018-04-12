@@ -16,8 +16,41 @@
 }
 
 .advantages__item {
+  position: relative;
+
   display: flex;
   align-items: center;
   margin-bottom: 20px;
   padding-left: 28.6%;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+
+    width: 60px;
+    height: 60px;
+
+    background-color: rgb(104, 183, 56);
+    background-repeat: no-repeat;
+    background-position: center;
+    transform: translateY(-50%);
+  }
+
+  &:nth-child(1)::before {
+    background-image: url('../img/leaf-advantages.png');
+  }
+
+  &:nth-child(2)::before {
+    background-image: url('../img/powder-andvantage.png');
+  }
+
+  &:nth-child(3)::before {
+    background-image: url('../img/fork-advantage.png');
+  }
+
+  &:nth-child(4)::before {
+    background-image: url('../img/clock-advantage.png');
+  }
 }
