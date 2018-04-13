@@ -1,0 +1,38 @@
+.action {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 290px;
+  padding: 0 @indent-mobile;
+
+  background-image: url("http://picua.org/img/2018-04/14/smjml4wc1hf4p3ho3jxpy38ne.jpg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  background-origin: content-box;
+}
+
+.action__link {
+  display: block;
+  width: 170px;
+  margin-top: auto;
+  margin-bottom: 40px;
+
+  font-size: 16px;
+  line-height: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+  color: rgb(255, 255, 255);
+
+
+  &::before {
+    content: url("http://picua.org/img/2018-04/14/abes03sz0gygjt2xh1vw9sumh.png");
+    position: absolute;
+    top: 65px;
+    right: 50%;
+
+    transform: translateX(50%);
+  }
+}

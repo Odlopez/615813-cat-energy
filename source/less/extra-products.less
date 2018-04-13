@@ -1,0 +1,40 @@
+.extra-products__title {
+  position: relative;
+
+  padding: 0 @indent-mobile;
+  overflow-x: hidden;
+
+  font-size: 24px;
+  color: rgb(17, 17, 17);
+
+  &::after,
+  &::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+
+    width: 100%;
+    height: 3px;
+
+    background-color: rgb(104, 183, 56);
+    transform: translateY(-50%);
+  }
+
+  &::after {
+    margin-left: 25px;
+  }
+
+  &::before {
+    margin-left: calc(-100% ~ '- 25px');
+
+    background-color: rgb(104, 183, 56);
+  }
+}
+
+.extra-products__list {
+  display: flex;
+  flex-direction: column;
+  padding: 0 @indent-mobile;
+
+  list-style: none;
+}
