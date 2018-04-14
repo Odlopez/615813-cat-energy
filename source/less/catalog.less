@@ -1,0 +1,26 @@
+.catalog {
+  display: flex;
+  flex-direction: column;
+}
+
+.catalog__title {
+  padding: 0  @indent-mobile;
+}
+
+.catalog__list {
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.catalog__item {
+  padding: 25px  @indent-mobile;
+
+  border: 1px solid rgb(237, 237, 237);
+  border-bottom: none;
+
+  &:last-of-type {
+    border-bottom: 1px solid rgb(237, 237, 237);
+  }
+}

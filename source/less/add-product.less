@@ -1,0 +1,45 @@
+.add-product {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.add-product__description {
+  font-size: 16px;
+  line-height: 20px;
+  color: rgb(17, 17, 17);
+  text-transform: uppercase;
+}
+
+.add-product__slogan {
+  font-size: 12px;
+  line-height: 16px;
+  font-family: Arial, Helvetica, sans-serif;
+  color: rgb(68, 68, 68);
+}
+
+.add-product__btn {
+  position: relative;
+
+  display: block;
+  width: 30px;
+  height: 30px;
+
+  &::after,
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+
+    width: 2px;
+    height: 100%;
+
+    background-color: rgb(211, 211, 211);
+    transform: translateX(-50%);
+  }
+
+  &::before {
+    transform: translateX(-50%) rotate(90deg);
+  }
+}

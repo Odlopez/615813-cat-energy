@@ -1,0 +1,60 @@
+.extra-product-form__label {
+  position: relative;
+
+  padding-left: 60px;
+
+  font-size: 20px;
+  line-height: 20px;
+  color: rgb(34, 34, 34);
+  text-transform: uppercase;
+
+  cursor: pointer;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+
+    width: 30px;
+    height: 30px;
+
+    border: 1px solid rgb(205, 205, 205);
+    transform: translateY(-50%);
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 13px;
+
+    width: 14px;
+    height: 8px;
+
+    border-bottom: 2px solid rgb(104, 183, 56);
+    border-left: 2px solid rgb(104, 183, 56);
+    transform: translateY(-50%) scale(0) rotate(-45deg);
+    transform-origin: left bottom;
+
+    transition: all 0.1s ease-in;
+  }
+
+  &:hover::before,
+  &:focus::before,
+  &:active::before {
+    border: 1px solid rgb(186, 186, 186);
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+input[type="checkbox"]:checked + .extra-product-form__label::after {
+  transform: translateY(-50%) scale(1) rotate(-45deg);
+}
+
+input[type="checkbox"]:focus + .extra-product-form__label::before {
+  outline: 1px solid  rgb(77, 144, 254);
+}

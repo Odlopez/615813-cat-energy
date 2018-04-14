@@ -1,0 +1,39 @@
+.toggle {
+  display: flex;
+  align-items: center;
+  width: 71.4%;
+}
+
+.toggle__label {
+  font-size: 16px;
+  line-height: 20px;
+  color: rgb(17,17,17);
+  text-transform: uppercase;
+}
+
+.toggle__range {
+  position: relative;
+
+  flex-grow: 1;
+  height: 14px;
+  margin-right: 20px;
+  margin-left: 20px;
+
+  background-color: rgb(255, 255, 255);
+  border: 1px solid rgb(205, 205, 205);
+  border-radius: 6px;
+}
+
+.toggle__slider {
+  position: absolute;
+  top: 3px;
+  left: 5px;
+
+  width: 33.3%;
+  height: 6px;
+
+  background-color: rgb(104, 183, 56);
+  border-radius: 3px;
+
+  transition: all 0.5s ease-out;
+}

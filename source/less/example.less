@@ -1,0 +1,40 @@
+.example {
+  display: flex;
+  flex-direction: column;
+  padding: 30px @indent-mobile;
+
+  background-color: rgb(242, 242, 242);
+}
+
+.example__title {
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 60px;
+  color: rgb(17, 17, 17);
+}
+
+.example__description {
+  font-size: 14px;
+  line-height: 18px;
+  font-family: Arial;
+  color: rgb(68, 68, 68);
+}
+
+.example__costs {
+  align-self: center;
+
+  font-size: 14px;
+  line-height: 20px;
+  color: rgb(17,17,17);
+  text-transform: uppercase;
+}
+
+.example__toggle {
+  align-self: center;
+}
+
+.example__image {
+  &--after {
+    display: none;
+  }
+}
