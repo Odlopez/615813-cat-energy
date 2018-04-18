@@ -1,0 +1,97 @@
+.program {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-top: 20px;
+  padding: 29px 20px;
+
+  color: rgb(17, 17, 17);
+
+  background-color: rgb(242, 242, 242);
+  background-repeat: no-repeat;
+  background-origin: content-box;
+
+  &--slim {
+    &::before {
+      content: "";
+      position: absolute;
+
+      width: 50px;
+      height: 50px;
+
+      background-color: @color-main;
+      border-radius: 50%;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+
+      width: 45px;
+      height: 50px;
+
+      background-image: url("../img/icon-cat-slim.svg");
+      background-repeat: no-repeat;
+    }
+  }
+
+  &--pro {
+    &::before {
+      content: "";
+      position: absolute;
+
+      width: 50px;
+      height: 50px;
+
+      background-color: @color-main;
+      border-radius: 50%;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+
+      width: 70px;
+      height: 30px;
+      margin-top: 12px;
+      margin-left: -12px;
+
+      background-image: url("../img/icon-cat-pro.svg");
+      background-repeat: no-repeat;
+    }
+  }
+}
+
+.program__title {
+  margin-top: 10px;
+  margin-left: 72px;
+
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 37px;
+  text-transform: uppercase;
+}
+
+.program__description {
+  margin: 0 0 20px;
+  padding-bottom: 20px;
+
+  font-size: 14px;
+  line-height: 18px;
+  font-family: @arial;
+  color: rgb(68, 68, 68);
+
+  border-bottom: 1px solid rgb(217, 217, 217);
+}
+
+.program__link {
+  position: relative;
+
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 16px;
+  color: rgb(17, 17, 17);
+  text-transform: uppercase;
+}
