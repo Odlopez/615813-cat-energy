@@ -1,12 +1,21 @@
 .example {
   display: flex;
   flex-direction: column;
-  padding: 30px @indent-mobile;
+  margin-top: 22px;
+  padding-top: 17px;
+  padding-bottom: 37px;
 
   background-color: rgb(242, 242, 242);
 }
 
+.example__wrap {
+  padding: 0 @indent-mobile;
+}
+
 .example__title {
+  margin: 0;
+  margin-bottom: 25px;
+
   font-weight: 400;
   font-size: 36px;
   line-height: 60px;
@@ -14,6 +23,9 @@
 }
 
 .example__description {
+  margin-bottom: 27px;
+  padding-right: 5px;
+
   font-size: 14px;
   line-height: 18px;
   font-family: @arial;
@@ -22,18 +34,26 @@
 
 .example__costs {
   align-self: center;
+  margin-top: 10px;
 
   font-size: 14px;
   line-height: 20px;
+  text-align: center;
   color: @text-dark;
   text-transform: uppercase;
 }
 
 .example__toggle {
   align-self: center;
+  width: 100%;
+  margin-top: 33px;
+  padding-right: 59px;
+  padding-left: 64px;
 }
 
 .example__image {
+  margin-top: 20px;
+
   &--after {
     display: none;
   }

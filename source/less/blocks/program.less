@@ -5,7 +5,7 @@
   flex-direction: column;
   align-items: flex-start;
   margin-top: 20px;
-  padding: 29px 20px;
+  padding: 23px 20px;
 
   color: @text-dark;
 
@@ -14,9 +14,12 @@
   background-origin: content-box;
 
   &--slim {
+    
     &::before {
       content: "";
       position: absolute;
+      top: 27px;
+      left: 22px;
 
       width: 50px;
       height: 50px;
@@ -28,6 +31,7 @@
     &::after {
       content: "";
       position: absolute;
+      left: 30px;
 
       width: 45px;
       height: 50px;
@@ -38,9 +42,13 @@
   }
 
   &--pro {
+    padding-top: 21px;
+
     &::before {
       content: "";
       position: absolute;
+      top: 23px;
+      left: 22px;
 
       width: 50px;
       height: 50px;
@@ -52,8 +60,9 @@
     &::after {
       content: "";
       position: absolute;
+      left: 25px;
 
-      width: 70px;
+      width: 68px;
       height: 30px;
       margin-top: 12px;
       margin-left: -12px;
@@ -66,6 +75,7 @@
 
 .program__title {
   margin-top: 10px;
+  margin-bottom: 30px;
   margin-left: 72px;
 
   font-weight: 400;
@@ -75,8 +85,8 @@
 }
 
 .program__description {
-  margin: 0 0 20px;
-  padding-bottom: 20px;
+  margin: 0 0 18px;
+  padding-bottom: 23px;
 
   font-size: 14px;
   line-height: 18px;
