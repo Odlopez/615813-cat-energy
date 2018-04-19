@@ -1,0 +1,38 @@
+.legend {
+  position: relative;
+
+  display: block;
+  width: 100%;
+  margin-bottom: 29px;
+  padding-right: 80px;
+  padding-bottom: 5px;
+  padding-left: @indent-mobile;
+  overflow: hidden;
+
+  font-size: 24px;
+  line-height: 24px;
+  font-family: @oswald;
+  color: @text-dark;
+
+  &::after,
+  &::before {
+    content: "";
+    position: absolute;
+    top: 13px;
+
+    width: 100%;
+    height: 3px;
+
+    background-color: @color-main;
+  }
+
+  &::after {
+    margin-left: 46px;
+  }
+
+  &::before {
+    margin-left: calc(-100% ~ "- 25px");
+
+    background-color: @color-main;
+  }
+}

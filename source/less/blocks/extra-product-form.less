@@ -1,14 +1,34 @@
+.extra-product-form__wrap {
+  display: flex;
+  flex-direction: column;
+  padding: 0 @indent-mobile;
+}
+
+.extra-product-form__legend {
+  margin-bottom: 10px;
+  &::after,
+  &::before {
+    top: 50%;
+  }
+
+  &::after {
+    margin-left: 23px;
+  }
+}
+
 .extra-product-form__label {
   position: relative;
 
-  padding-left: 60px;
+  margin-top: 25px;
+  padding-left: 46px;
 
-  font-size: 20px;
-  line-height: 20px;
+  font-size: 16px;
+  line-height: 18px;
   color: @text-dark * 2;
   text-transform: uppercase;
 
   cursor: pointer;
+
 
   &::before {
     content: "";
