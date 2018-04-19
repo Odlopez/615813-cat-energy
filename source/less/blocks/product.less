@@ -1,14 +1,14 @@
 .product {
-  display: flex;
-  flex-direction: column;
   position: relative;
+
+  display: flex;
+  flex-flow: row wrap;
+  width: 100%;
 }
 
 .product__image {
-  order: -1;
-  position: absolute;
-  left: 50%;
-  transform: translateX(-100px);
+  flex-basis: 50%;
+  margin-top: -1px;
 }
 
 .product__btn {
@@ -16,5 +16,5 @@
 }
 
 .product__characteristics {
-  margin-left: 50%;
+  flex-basis: 50%;
 }
