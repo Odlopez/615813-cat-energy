@@ -1,0 +1,39 @@
+.contact-user-form {
+  margin-top: 30px;
+}
+
+.contact-user-form__wrap {
+  .form-wrap();
+}
+
+.contact-user-form__label {
+  margin-right: 10px;
+
+  font-size: 16px;
+  line-height: 18px;
+  color: @text-dark * 2;
+  text-transform: uppercase;
+
+  &[for="user-email"] {
+    min-width: 51px;
+  }
+}
+
+.contact-user-form__input {
+  padding-right: 16px;
+  padding-left: 15px;
+
+  &[id="user-email"] {
+    background: url("../../img/icon-mail.svg") no-repeat right center;
+    background-size: 18px 13px;
+    background-origin: content-box;
+  }
+
+  &[id="user-tel"] {
+    padding-right: 13px;
+
+    background: url("../../img/icon-phone.svg") no-repeat right center;
+    background-size: 21px 21px;
+    background-origin: content-box;
+  }
+}

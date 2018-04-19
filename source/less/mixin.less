@@ -24,3 +24,14 @@
   width: 100%;
   clear: both;
 }
+
+.form-wrap() {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 0 @indent-mobile;
+
+  & + & {
+    margin-top: 14px;
+  }
+}

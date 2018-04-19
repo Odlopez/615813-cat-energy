@@ -4,7 +4,13 @@
 }
 
 .catalog__title {
+  margin-top: 15px;
   padding: 0  @indent-mobile;
+
+  font-size: 36px;
+  font-weight: 400;
+  line-height: 60px;
+  color: @text-dark;
 }
 
 .catalog__list {
@@ -15,7 +21,9 @@
 }
 
 .catalog__item {
-  padding: 25px  @indent-mobile;
+  padding-left: calc(@indent-mobile ~ "- 2px");
+  padding-right: calc(@indent-mobile ~ "- 2px");
+  padding-bottom: 25px;
 
   border: 1px solid rgb(237, 237, 237);
   border-bottom: none;

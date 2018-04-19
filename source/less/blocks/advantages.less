@@ -3,7 +3,11 @@
 }
 
 .advantages__title {
-  margin: 25px 0;
+  margin: 17px 0 28px;
+
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 60px;
 }
 
 .advantages__list {
@@ -24,6 +28,10 @@
   margin-bottom: 20px;
   padding-left: 80px;
 
+  font-size: 14px;
+  line-height: 18px;
+  font-family: @arial;
+
   &::before {
     content: "";
     position: absolute;
@@ -33,25 +41,25 @@
     width: 60px;
     height: 60px;
 
-    background-color: rgb(104, 183, 56);
+    background-color: @color-main;
     background-repeat: no-repeat;
     background-position: center;
     transform: translateY(-50%);
   }
 
   &:nth-child(1)::before {
-    background-image: url("http://picua.org/img/2018-04/13/7x9gt1unf3c5seqe3rzi24hsj.png");
+    background-image: url("../img/advantage-leaf@1x.png");
   }
 
   &:nth-child(2)::before {
-    background-image: url("http://picua.org/img/2018-04/13/06tltwjr6dvhu86dq4y0b1fkp.png");
+    background-image: url("../img/advantage-powder@1x.png");
   }
 
   &:nth-child(3)::before {
-    background-image: url("http://picua.org/img/2018-04/13/uyj2uwdry3f24cx7h26flcdi9.png");
+    background-image: url("../img/advantage-dining@1x.png");
   }
 
   &:nth-child(4)::before {
-    background-image: url("http://picua.org/img/2018-04/13/efa6volubt4f471a4ibmvrtuc.png");
+    background-image: url("../img/advantage-clock@1x.png");
   }
 }

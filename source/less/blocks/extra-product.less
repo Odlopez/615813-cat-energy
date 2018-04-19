@@ -1,7 +1,7 @@
 .extra-product {
   display: flex;
   flex-flow: row wrap;
-  padding: 15px 0;
+  padding: 12px 0 17px;
 
   border-top: 1px solid rgb(205, 205, 205);
   border-bottom: 1px solid rgb(205, 205, 205);
@@ -9,10 +9,12 @@
 
 .extra-product__name {
   width: 100%;
+  margin-top: 0;
 
+  font-weight: 400;
   font-size: 16px;
   line-height: 16px;
-  color: rgb(34, 34, 34);
+  color: @text-dark * 2;
   text-transform: uppercase;
 }
 
@@ -21,8 +23,8 @@
 
   font-size: 14px;
   line-height: 14px;
-  font-family: Arial, Helvetica, sans-serif;
-  color: rgb(68, 68, 68);
+  font-family: @arial;
+  color: @text-light;
 }
 
 .extra-product__value {
@@ -30,11 +32,12 @@
 
   font-size: 14px;
   line-height: 14px;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: @arial;
   text-align: right;
-  color: rgb(68, 68, 68);
+  color: @text-light;
 }
 
 .extra-product__btn {
   width: 100%;
+  margin-top: 13px;
 }

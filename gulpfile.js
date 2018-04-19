@@ -6,6 +6,9 @@ var plumber = require("gulp-plumber");
 var postcss = require("gulp-postcss");
 var autoprefixer = require("autoprefixer");
 var server = require("browser-sync").create();
+var posthtml = require("gulp-posthtml");
+var include = require("posthtml-include");
+const gulpBemCss = require('gulp-bem-css');
 
 gulp.task("style", function() {
   gulp.src("source/less/style.less")
@@ -29,4 +32,21 @@ gulp.task("serve", ["style"], function() {
 
   gulp.watch("source/less/**/*.less", ["style"]);
   gulp.watch("source/*.html").on("change", server.reload);
+});
+
+gulp.task("html", function () {
+  return gulp.src("source/*.html")
+    .pipe(posthtml([include()]))
+    .pipe(gulp.dest("source"));
+});
+
+gulp.task('bem-less', () => {
+  return gulp.src('source/*.html')
+    .pipe(gulpBemCss({
+      folder: 'source/css',
+      extension: 'less',
+      elementSeparator: '__',
+      modifierSeparator: '--'
+    }))
+    .pipe(gulp.dest('source/css/f'));
 });
