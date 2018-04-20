@@ -23,6 +23,7 @@
     "stylelint": "stylelint \"source/less/**/*.less\" --syntax less",
     "test": "npm run editorconfig && npm run stylelint",
     "build": "gulp style",
+    "insert-svg": "gulp html",
     "start": "gulp serve"
   },
   "browserslist": [
