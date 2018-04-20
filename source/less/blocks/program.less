@@ -103,4 +103,27 @@
   line-height: 16px;
   color: @text-dark;
   text-transform: uppercase;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+
+    width: 54px;
+    height: 11px;
+    margin-left: 12px;
+
+    background: url("../../img/icon-right-arrow-short.svg") no-repeat left center;
+    background-size: contain;
+    transform: translateY(-50%);
+  }
+
+  &:hover::after,
+  &focus::after {
+    background-image: url("../../img/icon-right-arrow-long.svg");
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }
