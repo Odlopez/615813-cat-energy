@@ -1,3 +1,7 @@
+.contacts {
+  position: relative;
+}
+
 .contacts__wrap {
   display: flex;
   justify-content: space-between;
@@ -11,6 +15,20 @@
   @media @tablet {
     min-height: 204px;
     padding: 0 9.375%;
+  }
+
+  @media @desktop {
+    position: absolute;
+    top: 50%;
+    z-index: 1;
+
+    width: 680 / 1440 * 100%;
+    padding: 0;
+    padding-left: @indent-desktop;
+
+    background: none;
+    background-image: linear-gradient(to right, transparent 16.165%, rgb(255, 255, 255) 16.165%, rgb(255, 255, 255));
+    transform: translateY(-50%);
   }
 }
 
@@ -28,6 +46,11 @@
     font-size: 20px;
     line-height: 25px;
   }
+
+  @media @desktop {
+    width: 245px;
+    padding-left: 13%;
+  }
 }
 
 .contacts__location {
@@ -43,5 +66,12 @@
 
     font-size: 16px;
     text-align: right;
+  }
+
+  @media @desktop {
+    width: 245px;
+    padding-right: 13%;
+
+    text-align: left;
   }
 }

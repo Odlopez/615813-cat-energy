@@ -8,6 +8,10 @@
     flex-direction: row;
     padding: 0 @indent-tablet;
   }
+
+  @media @desktop {
+    padding: 0;
+  }
 }
 
 .main-nav__button {
@@ -40,5 +44,10 @@
     padding: 0;
 
     border-bottom: none;
+  }
+
+  @media @desktop {
+    min-width: 50%;
+    padding-left: @indent-desktop;
   }
 }

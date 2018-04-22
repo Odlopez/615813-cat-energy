@@ -12,6 +12,10 @@
 
     padding-top: 0;
   }
+
+  @media @desktop {
+    flex-direction: row;
+  }
 }
 
 .example__wrap {
@@ -24,6 +28,13 @@
     padding: 0 @indent-tablet 250px;
 
     background-color: rgb(255, 255, 255);
+  }
+
+  @media @desktop {
+    min-width: 50%;
+    max-width: 50%;
+    padding-right: 9.375%;
+    padding-left: @indent-desktop;
   }
 }
 
@@ -85,6 +96,12 @@
     line-height: 20px;
     text-align: right;
   }
+
+  @media @desktop {
+    width: 100%;
+
+    text-align: center;
+  }
 }
 
 .example__toggle {
@@ -123,6 +140,10 @@
 
       transform: translateX(50%);
     }
+
+    @media @desktop {
+      right: 25%;
+    }
   }
 }
 
@@ -140,5 +161,11 @@
     width: 50%;
     height: 240px;
     overflow: hidden;
+  }
+
+  @media @desktop {
+    left: 50%;
+
+    width: 25%;
   }
 }
