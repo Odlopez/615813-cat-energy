@@ -1,20 +1,39 @@
 .product {
-  position: relative;
-
   display: flex;
   flex-flow: row wrap;
   width: 100%;
+
+  @media @tablet {
+    flex-flow: column nowrap;
+    align-items: center;
+  }
 }
 
 .product__image {
   flex-basis: 50%;
   margin-top: -1px;
+
+  @media @tablet {
+    position: absolute;
+    top: 0;
+    right: 50%;
+
+    transform: translateX(50%);
+  }
 }
 
 .product__btn {
   width: 100%;
+
+  @media @tablet {
+    margin-top: 20px;
+  }
 }
 
 .product__characteristics {
   flex-basis: 50%;
+
+  @media @tablet {
+    min-width: 100%;
+  }
 }

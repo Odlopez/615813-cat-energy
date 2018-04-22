@@ -33,8 +33,22 @@
   }
 
   &::before {
-    margin-left: calc(-100% ~ "- 25px");
+    margin-left: ~"calc(-100% - 25px)";
+
     background-color: @color-main;
+  }
+
+  @media @tablet {
+    padding-right: @indent-tablet;
+    padding-left: 8.46%;
+
+    &::after {
+      margin-left: 40px;
+    }
+
+    &::before {
+      margin-left: ~"calc(-100% - 35px)";
+    }
   }
 }
 
@@ -45,4 +59,16 @@
   padding: 0 @indent-mobile;
 
   list-style: none;
+
+  @media @tablet {
+    padding: 0 @indent-tablet;
+  }
+}
+
+.extra-products__action {
+  padding: 0 @indent-mobile;
+
+  @media @tablet {
+    padding: 0 @indent-tablet;
+  }
 }

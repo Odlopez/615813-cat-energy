@@ -4,12 +4,19 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: auto;
   min-height: 290px;
-  padding: 0 @indent-mobile;
 
-  background: @color-main url("../img/gift-photo-mobile@1x.jpg") no-repeat center center;
+  background-image: url("../img/gift-photo-mobile@1x.jpg"),
+    linear-gradient(to top, @color-main, @color-main);
+  background-repeat: no-repeat;
+  background-position: center center;
   background-size: cover;
   background-origin: content-box;
+
+  @media @tablet {
+    min-height: 200px;
+  }
 }
 
 .action__link {
@@ -35,5 +42,17 @@
     height: 65px;
 
     transform: translateX(50%);
+  }
+
+  @media @tablet {
+    margin-right: 125px;
+    margin-bottom: auto;
+    margin-left: auto;
+
+    text-align: left;
+
+    &::before {
+      left: 90px;
+    }
   }
 }
