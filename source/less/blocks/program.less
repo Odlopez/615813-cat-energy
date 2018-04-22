@@ -13,6 +13,10 @@
   background-repeat: no-repeat;
   background-origin: content-box;
 
+  @media @tablet {
+    padding: 80px 280px 80px 55px;
+  }
+
   &--slim {
     &::before {
       content: "";
@@ -25,6 +29,16 @@
 
       background-color: @color-main;
       border-radius: 50%;
+
+      @media @tablet {
+        top: 50%;
+        left: calc(~"100% - 260px");
+
+        width: 200px;
+        height: 200px;
+
+        transform: translateY(-50%);
+      }
     }
 
     &::after {
@@ -37,6 +51,16 @@
 
       background-image: url("../img/icon-cat-slim.svg");
       background-repeat: no-repeat;
+
+      @media @tablet {
+        top: 50%;
+        left: calc(~"100% - 220px");
+
+        width: 150px;
+        height: 200px;
+
+        transform: translateY(-50%);
+      }
     }
   }
 
@@ -54,6 +78,16 @@
 
       background-color: @color-main;
       border-radius: 50%;
+
+      @media @tablet {
+        top: 50%;
+        left: calc(~"100% - 260px");
+
+        width: 200px;
+        height: 200px;
+
+        transform: translateY(-50%);
+      }
     }
 
     &::after {
@@ -68,6 +102,16 @@
 
       background-image: url("../img/icon-cat-pro.svg");
       background-repeat: no-repeat;
+
+      @media @tablet {
+        top: 50%;
+        left: calc(~"100% - 285px");
+
+        width: 270px;
+        height: 115px;
+
+        transform: translateY(-50%);
+      }
     }
   }
 }
@@ -81,9 +125,17 @@
   font-size: 24px;
   line-height: 37px;
   text-transform: uppercase;
+
+  @media @tablet {
+    margin-left: 0;
+
+    font-size: 36px;
+    line-height: 37px;
+  }
 }
 
 .program__description {
+  width: 100%;
   margin: 0 0 18px;
   padding-bottom: 23px;
 
@@ -93,6 +145,12 @@
   color: @text-light;
 
   border-bottom: 1px solid rgb(217, 217, 217);
+
+  @media @tablet {
+    font-size: 16px;
+    line-height: 24px;
+    border-bottom: none;
+  }
 }
 
 .program__link {
@@ -103,6 +161,11 @@
   line-height: 16px;
   color: @text-dark;
   text-transform: uppercase;
+
+  @media @tablet {
+    font-size: 20px;
+    line-height: 20px;
+  }
 
   &::after {
     content: "";

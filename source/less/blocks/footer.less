@@ -5,8 +5,17 @@
   padding: 40px @indent-mobile 0;
 
   background-color: rgb(242, 242, 242);
+
+  @media @tablet {
+    padding: 0 @indent-tablet;
+    flex-direction: row;
+  }
 }
 
 .footer__logo {
   margin-bottom: 32px;
+
+  @media @tablet {
+    margin-bottom: 0;
+  }
 }

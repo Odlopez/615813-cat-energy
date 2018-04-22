@@ -6,10 +6,25 @@
   padding-bottom: 37px;
 
   background-color: rgb(242, 242, 242);
+
+  @media @tablet {
+    position: relative;
+
+    padding-top: 0;
+  }
 }
 
 .example__wrap {
   padding: 0 @indent-mobile;
+
+  @media @tablet {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    padding: 0 @indent-tablet 250px;
+
+    background-color: rgb(255, 255, 255);
+  }
 }
 
 .example__title {
@@ -20,6 +35,12 @@
   font-size: 36px;
   line-height: 60px;
   color: @text-dark;
+
+  @media @tablet {
+    width: 100%;
+
+    font-size: 60px;
+  }
 }
 
 .example__description {
@@ -30,6 +51,21 @@
   line-height: 18px;
   font-family: @arial;
   color: @text-light;
+
+  @media @tablet {
+    width: 100%;
+
+    font-size: 16px;
+    line-height: 24px;
+  }
+}
+
+.example__result {
+  width: 100%;
+
+  @media @tablet {
+    width: auto;
+  }
 }
 
 .example__costs {
@@ -41,6 +77,14 @@
   text-align: center;
   color: @text-dark;
   text-transform: uppercase;
+
+  @media @tablet {
+    width: 27%;
+
+    font-size: 20px;
+    line-height: 20px;
+    text-align: right;
+  }
 }
 
 .example__toggle {
@@ -49,12 +93,52 @@
   margin-top: 33px;
   padding-right: 59px;
   padding-left: 64px;
+
+  @media @tablet {
+    margin-top: 350px;
+    padding: 0 100px;
+  }
 }
 
 .example__image {
-  margin-top: 20px;
+  display: block;
+  margin: 20px auto 0;
+
+  @media @tablet {
+    position: absolute;
+    right: 0;
+
+    transform: translateX(50%);
+  }
 
   &--after {
     display: none;
+
+    @media @tablet {
+      position: absolute;
+      right: 50%;
+      bottom: 125px;
+
+      display: block;
+
+      transform: translateX(50%);
+    }
+  }
+}
+
+.example__image-wrap {
+  position: relative;
+
+  width: 100%;
+
+  @media @tablet {
+    position: absolute;
+    bottom: 125px;
+    left: 0;
+    z-index: 5;
+
+    width: 50%;
+    height: 240px;
+    overflow: hidden;
   }
 }

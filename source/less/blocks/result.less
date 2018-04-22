@@ -1,7 +1,6 @@
 .result {
   display: flex;
   justify-content: space-between;
-  width: 100%;
   margin: 0;
   padding: 0;
 
@@ -15,6 +14,11 @@
   flex-direction: column;
   align-items: center;
   width: 124px;
+
+  @media @tablet {
+    width: 162px;
+    margin-right: 42px;
+  }
 }
 
 .result__resource {
@@ -31,6 +35,13 @@
 
   border: 1px solid rgb(205, 205, 205);
   border-radius: 3px;
+
+  @media @tablet {
+    width: 162px;
+
+    font-size: 30px;
+    line-height: 37px;
+  }
 }
 
 .result__index {
@@ -48,4 +59,14 @@
 
   background-color: rgb(242, 242, 242);
   transform: translate(-4px, -8px);
+
+  @media @tablet {
+    width: 142px;
+    padding: 0 8px;
+
+    font-size: 14px;
+    line-height: 14px;
+
+    background-color: rgb(255, 255, 255);
+  }
 }

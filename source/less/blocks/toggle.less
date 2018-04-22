@@ -4,10 +4,28 @@
 }
 
 .toggle__label {
+  padding-bottom: 7px;
+
   font-size: 16px;
   line-height: 20px;
   color: @text-dark;
   text-transform: uppercase;
+
+  border-bottom: 1px dotted rgb(190, 190, 190);
+
+  @media @tablet {
+    font-size: 20px;
+    line-height: 20px;
+  }
+
+  &:hover,
+  &:focus {
+    border-bottom: 1px solid rgb(152, 152, 152);
+  }
+
+  &:active {
+    border-bottom: 1px solid transparent;
+  }
 }
 
 .toggle__range {
@@ -21,6 +39,14 @@
   background-color: rgb(255, 255, 255);
   border: 1px solid rgb(205, 205, 205);
   border-radius: 6px;
+
+  @media @tablet {
+    height: 6px;
+    margin: 0 20px 7px 20px;
+
+    background-color: rgb(220, 220, 220);
+    border: none;
+  }
 }
 
 .toggle__slider {
@@ -35,4 +61,33 @@
   border-radius: 3px;
 
   transition: all 0.5s ease-out;
+
+  @media @tablet {
+    top: 50%;
+    left: 50%;
+
+    width: 34px;
+    height: 34px;
+
+    background-color: rgb(104, 183, 56);
+    border: 1px solid rgb(205, 205, 205);
+    border-radius: 50%;
+    box-shadow: inset 0 0 0 12px rgb(255, 255, 255),
+      0 2px 5px rgba(0, 0, 0, 0.15);
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+
+    &:hover,
+    &:focus {
+      box-shadow: inset 0 0 0 12px rgb(255, 255, 255),
+        0 3px 5px rgba(0, 0, 0, 0.25);
+    }
+
+    &:active {
+      border-color: rgb(104, 183, 56);
+      box-shadow: inset 0 0 0 1px rgb(104, 183, 56),
+        inset 0 0 0 12px rgb(255, 255, 255),
+        0 4px 5px rgba(0, 0, 0, 0.25);
+    }
+  }
 }
