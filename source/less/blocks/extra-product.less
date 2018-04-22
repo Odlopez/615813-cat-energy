@@ -5,6 +5,12 @@
 
   border-top: 1px solid rgb(205, 205, 205);
   border-bottom: 1px solid rgb(205, 205, 205);
+
+  @media @desktop {
+    justify-content: space-between;
+    align-items: center;
+    min-height: 70px;
+  }
 }
 
 .extra-product__name {
@@ -21,6 +27,11 @@
     width: auto;
     margin-right: auto;
   }
+
+  @media @desktop {
+    width: 285 / 895 * 100%;
+    margin: 0;
+  }
 }
 
 .extra-product__amount {
@@ -33,6 +44,11 @@
 
   @media @tablet {
     width: auto;
+  }
+
+  @media @desktop {
+    width: 205 / 895 * 100%;
+    margin: 0;
   }
 }
 
@@ -49,9 +65,21 @@
     width: auto;
     margin-left: 50px;
   }
+
+  @media @desktop {
+    width: 40 / 895 * 100%;
+    margin: 0;
+
+    text-align: left;
+  }
 }
 
 .extra-product__btn {
   width: 100%;
   margin-top: 13px;
+
+  @media @desktop {
+    width: 245 / 895 * 100%;
+    margin: 0;
+  }
 }

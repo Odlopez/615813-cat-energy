@@ -14,8 +14,13 @@
   background-size: cover;
   background-origin: content-box;
 
-  @media @tablet {
+  @media @tablet-only {
     min-height: 200px;
+  }
+
+  @media @desktop {
+    width: 245 / 1440 * 100%;
+    min-height: 290px;
   }
 }
 
@@ -44,7 +49,7 @@
     transform: translateX(50%);
   }
 
-  @media @tablet {
+  @media @tablet-only {
     margin-right: 125px;
     margin-bottom: auto;
     margin-left: auto;

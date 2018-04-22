@@ -5,6 +5,10 @@
   @media @tablet {
     padding: 0 @indent-tablet;
   }
+
+  @media @desktop {
+    padding: 0 @indent-desktop;
+  }
 }
 
 .catalog__title {
@@ -38,9 +42,9 @@
 }
 
 .catalog__item {
-  padding-left: calc(@indent-mobile ~ "- 2px");
-  padding-right: calc(@indent-mobile ~ "- 2px");
+  padding-right: calc~"(@indent-mobile - 2px)";
   padding-bottom: 25px;
+  padding-left: calc~"(@indent-mobile - 2px)";
 
   border: 1px solid rgb(237, 237, 237);
   border-bottom: none;
@@ -63,5 +67,11 @@
     &--empty {
       background-color: rgb(255, 255, 255);
     }
+  }
+
+  @media @desktop {
+    flex-basis: 245 / 1220 * 100%;
+    padding-right: 2.87%;
+    padding-left: 2.87%;
   }
 }

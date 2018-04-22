@@ -1,5 +1,10 @@
 .extra-products {
   margin-bottom: 33px;
+
+  @media @desktop {
+    display: flex;
+    flex-flow: row wrap;
+  }
 }
 
 .extra-products__title {
@@ -50,6 +55,11 @@
       margin-left: ~"calc(-100% - 35px)";
     }
   }
+
+  @media @desktop {
+    width: 100%;
+    padding-left: @indent-desktop;
+  }
 }
 
 .extra-products__list {
@@ -63,6 +73,13 @@
   @media @tablet {
     padding: 0 @indent-tablet;
   }
+
+  @media @desktop {
+    width: 1005 / 1440 * 100%;
+    margin: 0;
+    padding: 0;
+    padding-left: @indent-desktop;
+  }
 }
 
 .extra-products__action {
@@ -70,5 +87,11 @@
 
   @media @tablet {
     padding: 0 @indent-tablet;
+  }
+
+  @media @desktop {
+    margin-right: @indent-desktop;
+    margin-left: auto;
+    padding: 0;
   }
 }
