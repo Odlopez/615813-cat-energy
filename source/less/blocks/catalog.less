@@ -35,7 +35,8 @@
 
   @media @tablet {
     display: flex;
-    flex-flow: row wrap;
+    flex-direction: row;
+    flex-wrap: wrap;
     justify-content: space-between;
   }
 }
@@ -55,7 +56,7 @@
   @media @tablet {
     position: relative;
 
-    flex-basis: 324 / 708 * 100%;
+    width: 324 / 708 * 100%;
     margin-top: 140px;
     padding-top: 165px;
     padding-right: 5.226%;
@@ -69,7 +70,7 @@
   }
 
   @media @desktop {
-    flex-basis: 245 / 1220 * 100%;
+    width: 245 / 1220 * 100%;
     padding-right: 2.87%;
     padding-left: 2.87%;
   }
