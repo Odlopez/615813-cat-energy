@@ -9,9 +9,10 @@
   color: rgb(255, 255, 255);
 
   background-image: url("../img/index-background-mobile@1x.jpg"),
-    linear-gradient(to bottom, @color-main 0, @color-main 63.8%, transparent 63.8%);
+    linear-gradient(to bottom, rgb(101, 169, 60) 0, rgb(101, 169, 60) 305px, transparent 305px);
   background-repeat: no-repeat;
   background-position: top;
+  background-size: auto 305px;
 
   @media @tablet {
     position: relative;
@@ -19,7 +20,7 @@
     align-items: flex-start;
     min-height: 810px;
     padding-right: 28.9%;
-    padding-left: 11.71875%;
+    padding-left: 15.625%;
 
     color: @text-dark;
 
@@ -28,11 +29,12 @@
 
   @media @desktop {
     width: 50%;
-    padding: 100px 0 0 13.264%;
+    padding: 45px 0 0 13.264%;
   }
 }
 
 .capital-block__title {
+  width: 100%;
   margin: 0;
 
   font-weight: 400;
@@ -56,8 +58,14 @@
   text-transform: uppercase;
 
   @media @tablet {
+    margin: 45px 0;
+
     font-size: 20px;
     line-height: 20px;
+  }
+
+  @media @desktop {
+    margin-bottom: 50px;
   }
 }
 
@@ -91,5 +99,7 @@
 
   @media @tablet {
     width: auto;
+
+    font-size: 20px;
   }
 }

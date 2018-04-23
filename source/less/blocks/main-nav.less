@@ -6,11 +6,18 @@
 
   @media @tablet {
     flex-direction: row;
+    justify-content: space-between;
     padding: 0 @indent-tablet;
   }
 
   @media @desktop {
     padding: 0;
+  }
+}
+
+.main-nav__logo {
+  @media @tablet-only {
+    width: 180px;
   }
 }
 
@@ -41,6 +48,7 @@
 
   @media @tablet {
     width: auto;
+    min-height: 112px;
     padding: 0;
 
     border-bottom: none;
@@ -48,6 +56,8 @@
 
   @media @desktop {
     min-width: 50%;
+    min-height: 176px;
+
     padding-left: @indent-desktop;
   }
 }

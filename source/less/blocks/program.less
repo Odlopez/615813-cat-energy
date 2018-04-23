@@ -14,7 +14,8 @@
   background-origin: content-box;
 
   @media @tablet {
-    padding: 80px 280px 80px 55px;
+    margin-top: 27px;
+    padding: 78px 280px 62px 53px;
   }
 
   &--slim {
@@ -65,8 +66,6 @@
   }
 
   &--pro {
-    padding-top: 21px;
-
     &::before {
       content: "";
       position: absolute;
@@ -113,6 +112,10 @@
         transform: translateY(-50%);
       }
     }
+
+    @media @tablet-only {
+      padding-right: 315px;
+    }
   }
 }
 
@@ -127,6 +130,8 @@
   text-transform: uppercase;
 
   @media @tablet {
+    margin-top: 0;
+    margin-bottom: 24px;
     margin-left: 0;
 
     font-size: 36px;
@@ -147,6 +152,8 @@
   border-bottom: 1px solid rgb(217, 217, 217);
 
   @media @tablet {
+    margin-bottom: 36px;
+
     font-size: 16px;
     line-height: 24px;
 

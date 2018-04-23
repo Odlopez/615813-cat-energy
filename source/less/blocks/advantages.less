@@ -23,6 +23,9 @@
   color: @text-dark;
 
   @media @tablet {
+    margin-top: 46px;
+    margin-bottom: 46px;
+
     font-size: 60px;
     line-height: 60px;
   }
@@ -59,8 +62,12 @@
   color: @text-light;
 
   @media @tablet {
-    flex-basis: 324 / 708 * 100%;
-    padding: 120px 100px 140px 0;
+    width: 324 / 708 * 100%;
+    margin-top: 27px;
+    margin-bottom: 106px;
+    padding-top: 113px;
+    padding-right: 80px;
+    padding-left: 0;
 
     font-size: 16px;
     line-height: 24px;
@@ -71,7 +78,7 @@
       content: counter(section);
       position: absolute;
       top: -40px;
-      left: 125px;
+      left: 115px;
       z-index: -1;
 
       font-size: 281px;
@@ -82,7 +89,7 @@
   }
 
   @media @desktop {
-    flex-basis: 245 / 1220 * 100%;
+    width: 245 / 1220 * 100%;
     padding: 115px 0;
   }
 
