@@ -1,7 +1,24 @@
+.extra-product-form {
+  @media @desktop {
+    width: 100%;
+  }
+}
+
 .extra-product-form__wrap {
   display: flex;
   flex-direction: column;
   padding: 0 @indent-mobile;
+
+  @media @tablet {
+    flex-flow: row wrap;
+    justify-content: space-between;
+    padding-right: 67 / 768 * 100%;
+    padding-left: 70 / 768 * 100%;
+  }
+
+  @media @desktop {
+    padding: 0 @indent-desktop;
+  }
 }
 
 .extra-product-form__legend {
@@ -50,6 +67,14 @@
 
   &:active {
     opacity: 0.3;
+  }
+
+  @media @tablet {
+    width: 37.37%;
+  }
+
+  @media @desktop {
+    width: 245 / 1220 * 100%;
   }
 }
 
