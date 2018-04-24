@@ -35,3 +35,21 @@
     margin-top: 14px;
   }
 }
+
+.placeholder(@color: @color-main) {
+  &::-webkit-input-placeholder {
+    color: @color;
+  }
+
+  &::-moz-placeholder {
+    color: @color;
+  }
+
+  &:-ms-input-placeholder {
+    color: @color;
+  }
+
+  &:-moz-placeholder {
+    color: @color;
+  }
+}
