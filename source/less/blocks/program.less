@@ -18,6 +18,10 @@
     padding: 78px 280px 62px 53px;
   }
 
+  @media @desktop {
+    padding-right: 50px;
+  }
+
   &--slim {
     &::before {
       content: "";
@@ -32,13 +36,21 @@
       border-radius: 50%;
 
       @media @tablet-only {
-        top: 50%;
+        top: 52%;
         left: calc(~"100% - 260px");
 
         width: 200px;
         height: 200px;
 
         transform: translateY(-50%);
+      }
+
+      @media @desktop {
+        top: 49px;
+        left: 51px;
+
+        width: 100px;
+        height: 100px;
       }
     }
 
@@ -54,13 +66,21 @@
       background-repeat: no-repeat;
 
       @media @tablet-only {
-        top: 50%;
-        left: calc(~"100% - 220px");
+        top: 48%;
+        left: calc(~"100% - 233px");
 
         width: 150px;
-        height: 200px;
+        height: 195px;
 
         transform: translateY(-50%);
+      }
+
+      @media @desktop {
+        top: 40px;
+        left: 65px;
+
+        width: 71px;
+        height: 98px;
       }
     }
   }
@@ -79,13 +99,21 @@
       border-radius: 50%;
 
       @media @tablet-only {
-        top: 50%;
+        top: 52%;
         left: calc(~"100% - 260px");
 
         width: 200px;
         height: 200px;
 
         transform: translateY(-50%);
+      }
+
+      @media @desktop {
+        top: 49px;
+        left: 51px;
+
+        width: 100px;
+        height: 100px;
       }
     }
 
@@ -103,13 +131,21 @@
       background-repeat: no-repeat;
 
       @media @tablet-only {
-        top: 50%;
+        top: 49%;
         left: calc(~"100% - 285px");
 
         width: 270px;
         height: 115px;
 
         transform: translateY(-50%);
+      }
+
+      @media @desktop {
+        top: 57px;
+        left: 45px;
+
+        width: 135px;
+        height: 58px;
       }
     }
 
@@ -137,6 +173,11 @@
     font-size: 36px;
     line-height: 37px;
   }
+
+  @media @desktop {
+    margin-bottom: 72px;
+    margin-left: 160px;
+  }
 }
 
 .program__description {
@@ -158,6 +199,10 @@
     line-height: 24px;
 
     border-bottom: none;
+  }
+
+  @media @desktop {
+    margin-bottom: 10px;
   }
 }
 
@@ -187,6 +232,10 @@
     background: url("../img/icon-right-arrow-short.svg") no-repeat left center;
     background-size: contain;
     transform: translateY(-50%);
+
+    @media @tablet {
+      margin-left: 23px;
+    }
   }
 
   &:hover::after,

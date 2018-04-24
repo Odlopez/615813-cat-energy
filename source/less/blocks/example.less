@@ -16,6 +16,9 @@
 
   @media @desktop {
     flex-direction: row;
+    padding-bottom: 0;
+
+    background: transparent linear-gradient(to bottom, transparent 154px, rgb(242, 242, 242) 154px);
   }
 }
 
@@ -34,8 +37,11 @@
   @media @desktop {
     min-width: 50%;
     max-width: 50%;
-    padding-right: 9.375%;
+    padding-right: 11.5%;
+    padding-bottom: 69px;
     padding-left: @indent-desktop;
+
+    background-color: transparent;
   }
 }
 
@@ -55,6 +61,10 @@
 
     font-size: 60px;
   }
+
+  @media @desktop {
+    margin-bottom: 132px;
+  }
 }
 
 .example__description {
@@ -73,6 +83,10 @@
 
     font-size: 16px;
     line-height: 24px;
+  }
+
+  @media @desktop {
+    margin-bottom: 69px;
   }
 }
 
@@ -105,21 +119,35 @@
 
   @media @desktop {
     width: 100%;
+    margin-top: 42px;
+    margin-bottom: 0;
 
-    text-align: center;
+    text-align: left;
+  }
+}
+
+.example__costs-value {
+  @media @desktop {
+    margin-left: 59px;
   }
 }
 
 .example__toggle {
   align-self: center;
   width: 100%;
-  margin-top: 33px;
+  margin-top: 14px;
   padding-right: 59px;
   padding-left: 64px;
 
   @media @tablet {
     margin-top: 367px;
     padding: 0 100px;
+  }
+
+  @media @desktop {
+    margin-top: 453px;
+    padding-right: @indent-desktop;
+    padding-left: 40px;
   }
 }
 
@@ -129,26 +157,29 @@
 
   @media @tablet {
     position: absolute;
-    right: 0;
+    bottom: 125px;
+    left: 50%;
 
-    transform: translateX(50%);
+    transform: translateX(-50%);
+  }
+
+  &--before {
+    @media @desktop {
+      left: 50%;
+      margin: 0;
+      transform: translateX(0);
+    }
   }
 
   &--after {
-    display: none;
-
     @media @tablet {
       position: absolute;
-      right: 50%;
       bottom: 125px;
+      left: 0;
 
       display: block;
 
-      transform: translateX(50%);
-    }
-
-    @media @desktop {
-      right: 25%;
+      transform: translateX(-50%);
     }
   }
 }
@@ -156,22 +187,24 @@
 .example__image-wrap {
   position: relative;
 
-  width: 100%;
+  width: 0;
 
   @media @tablet {
     position: absolute;
-    bottom: 125px;
-    left: 0;
+    right: 0;
+    bottom: 0;
     z-index: 5;
 
     width: 50%;
-    height: 240px;
+    height: 462px;
     overflow: hidden;
+
+    background-color: rgb(234, 234, 234);
   }
 
   @media @desktop {
-    left: 50%;
+    left: none;
 
-    width: 25%;
+    width: 395 / 1440 * 100%;
   }
 }
