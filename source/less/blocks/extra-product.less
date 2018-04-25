@@ -1,10 +1,24 @@
 .extra-product {
   display: flex;
   flex-flow: row wrap;
-  padding: 12px 0 17px;
+
+  font-size: 14px;
+  line-height: 14px;
+  font-family: @font-extra;
+  color: @text-light;
 
   border-top: 1px solid rgb(205, 205, 205);
-  border-bottom: 1px solid rgb(205, 205, 205);
+  border-right: 1px solid rgb(205, 205, 205);
+  border-left: 1px solid rgb(205, 205, 205);
+
+  &:last-child {
+    border-bottom: 1px solid rgb(205, 205, 205);
+  }
+
+  @media @tablet {
+    font-size: 16px;
+    line-height: 20px;
+  }
 
   @media @desktop {
     justify-content: space-between;
@@ -20,12 +34,16 @@
   font-weight: 400;
   font-size: 16px;
   line-height: 16px;
+  font-family: @font-main;
   color: @text-dark * 2;
   text-transform: uppercase;
 
   @media @tablet {
     width: auto;
     margin-right: auto;
+
+    font-size: 20px;
+    line-height: 20px;
   }
 
   @media @desktop {
@@ -36,11 +54,6 @@
 
 .extra-product__amount {
   width: 50%;
-
-  font-size: 14px;
-  line-height: 14px;
-  font-family: @font-extra;
-  color: @text-light;
 
   @media @tablet {
     width: auto;
@@ -55,11 +68,7 @@
 .extra-product__value {
   width: 50%;
 
-  font-size: 14px;
-  line-height: 14px;
-  font-family: @font-extra;
   text-align: right;
-  color: @text-light;
 
   @media @tablet {
     width: auto;
@@ -77,6 +86,13 @@
 .extra-product__btn {
   width: 100%;
   margin-top: 13px;
+
+  @media @tablet {
+    height: 40px;
+    margin-top: 5px;
+
+    font-size: 16px;
+  }
 
   @media @desktop {
     width: 245 / 895 * 100%;

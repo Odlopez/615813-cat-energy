@@ -1,8 +1,8 @@
 .product {
   display: flex;
   flex-flow: row wrap;
-  width: 100%;
   justify-content: center;
+  width: 100%;
 
   @media @tablet {
     flex-flow: column nowrap;
@@ -24,9 +24,14 @@
 
 .product__btn {
   width: 100%;
+  margin-top: -1px;
 
   @media @tablet {
-    margin-top: 20px;
+    height: 40px;
+    margin-top: 38px;
+
+    font-size: 16px;
+    line-height: 20px;
   }
 }
 
