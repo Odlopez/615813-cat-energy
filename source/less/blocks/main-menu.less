@@ -18,35 +18,6 @@
 
     font-weight: 400;
   }
-
-  @media @desktop {
-    padding-right: @indent-desktop;
-  }
-
-  &--index {
-    @media @desktop {
-      position: relative;
-
-      display: flex;
-      flex-flow: row wrap;
-      justify-content: flex-end;
-      width: 50%;
-
-      &::before {
-        content: "";
-        position: absolute;
-        top: 0;
-        right: 0;
-        z-index: -1;
-
-        width: 100%;
-        min-height: 696px;
-
-        background: @color-main url("../img/index-background-mobile@1x.jpg") no-repeat;
-        background-size: cover;
-      }
-    }
-  }
 }
 
 .main-menu__item {

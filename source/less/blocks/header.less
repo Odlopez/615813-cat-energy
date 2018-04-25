@@ -1,4 +1,24 @@
 .header {
   width: 100%;
   min-height: 66px;
+
+  &--index {
+    @media @desktop {
+      position: relative;
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        z-index: -1;
+
+        width: 50%;
+        min-height: 696px;
+
+        background: rgb(101, 169, 60) url("../img/index-background-mobile@1x.jpg") no-repeat;
+        background-size: auto 100%;
+      }
+    }
+  }
 }

@@ -7,7 +7,6 @@
   padding-right: 80px;
   padding-bottom: 5px;
   padding-left: @indent-mobile;
-  overflow: hidden;
 
   font-size: 24px;
   line-height: 24px;
@@ -20,7 +19,7 @@
     position: absolute;
     top: 13px;
 
-    width: 100%;
+    width: 100vw;
     height: 3px;
 
     background-color: @color-main;
@@ -31,9 +30,7 @@
   }
 
   &::before {
-    margin-left: calc(-100% ~ "- 25px");
-
-    background-color: @color-main;
+    margin-left: calc(-100vw ~ "- 25px");
   }
 
   @media @tablet {
@@ -45,5 +42,6 @@
 
   @media @desktop {
     padding: 0 @indent-desktop;
+    max-width: 1300px;
   }
 }

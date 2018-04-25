@@ -1,15 +1,3 @@
-.programs {
-  padding: 0 @indent-mobile;
-
-  @media @tablet {
-    padding: 0 @indent-tablet;
-  }
-
-  @media @desktop {
-    padding: 0 @indent-desktop;
-  }
-}
-
 .programs__list {
   display: flex;
   flex-direction: column;
@@ -26,7 +14,13 @@
 }
 
 .programs__item {
+  margin: 20px @indent-mobile 0;
+
+  @media @tablet {
+    margin: 0;
+  }
+
   @media @desktop {
-    width: 570 / 1220 * 100%;
+    width: (@cell-d + @small-cell-d) * 2;
   }
 }

@@ -4,7 +4,6 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  margin-top: 20px;
   padding: 23px 20px;
 
   color: @text-dark;
@@ -12,15 +11,6 @@
   background-color: rgb(242, 242, 242);
   background-repeat: no-repeat;
   background-origin: content-box;
-
-  @media @tablet {
-    margin-top: 27px;
-    padding: 78px 280px 62px 53px;
-  }
-
-  @media @desktop {
-    padding-right: 50px;
-  }
 
   &--slim {
     &::before {
@@ -34,24 +24,6 @@
 
       background-color: @color-main;
       border-radius: 50%;
-
-      @media @tablet-only {
-        top: 52%;
-        left: calc(~"100% - 260px");
-
-        width: 200px;
-        height: 200px;
-
-        transform: translateY(-50%);
-      }
-
-      @media @desktop {
-        top: 49px;
-        left: 51px;
-
-        width: 100px;
-        height: 100px;
-      }
     }
 
     &::after {
@@ -64,24 +36,6 @@
 
       background-image: url("../img/icon-cat-slim.svg");
       background-repeat: no-repeat;
-
-      @media @tablet-only {
-        top: 48%;
-        left: calc(~"100% - 233px");
-
-        width: 150px;
-        height: 195px;
-
-        transform: translateY(-50%);
-      }
-
-      @media @desktop {
-        top: 40px;
-        left: 65px;
-
-        width: 71px;
-        height: 98px;
-      }
     }
   }
 
@@ -97,24 +51,6 @@
 
       background-color: @color-main;
       border-radius: 50%;
-
-      @media @tablet-only {
-        top: 52%;
-        left: calc(~"100% - 260px");
-
-        width: 200px;
-        height: 200px;
-
-        transform: translateY(-50%);
-      }
-
-      @media @desktop {
-        top: 49px;
-        left: 51px;
-
-        width: 100px;
-        height: 100px;
-      }
     }
 
     &::after {
@@ -129,8 +65,51 @@
 
       background-image: url("../img/icon-cat-pro.svg");
       background-repeat: no-repeat;
+    }
+  }
 
-      @media @tablet-only {
+  @media @tablet {
+    margin-top: 27px;
+    padding: 78px 280px 62px 53px;
+  }
+
+  @media @tablet-only {
+    &--slim {
+      &::before {
+        top: 52%;
+        left: calc(~"100% - 260px");
+
+        width: 200px;
+        height: 200px;
+
+        transform: translateY(-50%);
+      }
+
+      &::after {
+        top: 48%;
+        left: calc(~"100% - 233px");
+
+        width: 150px;
+        height: 195px;
+
+        transform: translateY(-50%);
+      }
+    }
+
+    &--pro {
+      padding-right: 315px;
+
+      &::before {
+        top: 52%;
+        left: calc(~"100% - 260px");
+
+        width: 200px;
+        height: 200px;
+
+        transform: translateY(-50%);
+      }
+
+      &::after {
         top: 49%;
         left: calc(~"100% - 285px");
 
@@ -139,18 +118,48 @@
 
         transform: translateY(-50%);
       }
+    }
+  }
 
-      @media @desktop {
-        top: 57px;
-        left: 45px;
+  @media @desktop {
+    padding-right: 50px;
 
-        width: 135px;
-        height: 58px;
+    &--slim {
+      &::before {
+        top: 49px;
+        left: 51px;
+
+        width: 100px;
+        height: 100px;
+      }
+
+      &::after {
+        top: 40px;
+        left: 65px;
+
+        width: 71px;
+        height: 98px;
       }
     }
 
-    @media @tablet-only {
-      padding-right: 315px;
+    &--pro {
+      &::before {
+        top: 49px;
+        left: 51px;
+
+        width: 100px;
+        height: 100px;
+      }
+
+      &::after {
+        @media @desktop {
+          top: 57px;
+          left: 45px;
+
+          width: 135px;
+          height: 58px;
+        }
+      }
     }
   }
 }
@@ -215,11 +224,6 @@
   color: @text-dark;
   text-transform: uppercase;
 
-  @media @tablet {
-    font-size: 20px;
-    line-height: 20px;
-  }
-
   &::after {
     content: "";
     position: absolute;
@@ -232,10 +236,6 @@
     background: url("../img/icon-right-arrow-short.svg") no-repeat left center;
     background-size: contain;
     transform: translateY(-50%);
-
-    @media @tablet {
-      margin-left: 23px;
-    }
   }
 
   &:hover::after,
@@ -245,5 +245,14 @@
 
   &:active {
     opacity: 0.3;
+  }
+
+  @media @tablet {
+    font-size: 20px;
+    line-height: 20px;
+
+    &::after {
+      margin-left: 23px;
+    }
   }
 }
