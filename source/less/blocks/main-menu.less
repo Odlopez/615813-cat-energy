@@ -1,7 +1,7 @@
 .main-menu {
+  .without_indentation();
+
   display: none;
-  margin: 0;
-  padding: 0;
 
   list-style: none;
   font-weight: 500;
@@ -10,14 +10,30 @@
   &:target {
     display: block;
   }
+
+  @media @tablet {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-end;
+
+    font-weight: 400;
+  }
 }
 
 .main-menu__item {
   display: flex;
+  align-items: center;
   min-height: 66px;
   padding: 0 @indent-mobile;
 
   border-bottom: 1px solid rgb(230, 230, 230);
+
+  @media @tablet {
+    margin-left: 35px;
+    padding: 0;
+
+    border-bottom: 0;
+  }
 }
 
 .main-menu__link {
@@ -25,7 +41,7 @@
   margin: auto;
   padding: 6px 0;
 
-  font-size: 20px;
+  font-size: 18px;
   line-height: 25px;
   color: @text-dark;
 
@@ -33,11 +49,11 @@
 
   &:hover,
   &:focus {
-    color: rgba(17, 17, 17, 0.6);
+    opacity: 0.6;
   }
 
   &:active {
-    color: rgba(17, 17, 17, 0.3);
+    opacity: 0.3;
   }
 
   &--active,
@@ -47,5 +63,24 @@
     color: @text-dark;
 
     border-bottom: 2px solid @color-main;
+  }
+
+  &--index {
+    @media @desktop {
+      color: rgb(255, 255, 255);
+
+      &-active,
+      &-active:hover,
+      &-active:focus,
+      &-active:active {
+        color: rgb(255, 255, 255);
+
+        border-bottom: 2px solid rgb(255, 255, 255);
+      }
+    }
+  }
+
+  @media @desktop {
+    font-size: 20px;
   }
 }

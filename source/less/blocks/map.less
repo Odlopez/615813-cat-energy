@@ -2,10 +2,14 @@
   position: relative;
 
   height: 360px;
+  overflow-y: hidden;
 
   background-image: url("../img/bg-map-mobile@1x.png");
   background-repeat: no-repeat;
-  overflow-y: hidden;
+
+  @media @tablet {
+    height: 397px;
+  }
 }
 
 .map__image {

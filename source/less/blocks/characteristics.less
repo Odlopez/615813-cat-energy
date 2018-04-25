@@ -1,9 +1,7 @@
 .characteristics {
-  width: 140px;
-
   font-size: 12px;
   line-height: 14px;
-  font-family: @arial;
+  font-family: @font-extra;
   color: @text-light;
 }
 
@@ -12,16 +10,38 @@
 
   font-size: 16px;
   line-height: 20px;
-  font-family: @oswald;
+  font-family: @font-main;
   text-align: left;
   color: @text-dark;
   text-transform: uppercase;
+
+  @media @tablet {
+    padding: 0 27.5%;
+
+    text-align: center;
+  }
+
+  @media @desktop {
+    padding: 0 10%;
+  }
 }
 
 .characteristics__indicator {
   text-align: left;
+
+  @media @tablet {
+    padding: 10px 0;
+
+    border-bottom: 1px solid rgb(205, 205, 205);
+  }
 }
 
 .characteristics__value {
   text-align: right;
+
+  @media @tablet {
+    padding: 10px 0;
+
+    border-bottom: 1px solid rgb(205, 205, 205);
+  }
 }

@@ -4,14 +4,24 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: auto;
   min-height: 290px;
-  padding: 0 @indent-mobile;
 
-  background-image: url("../img/gift-photo-mobile@1x.jpg");
+  background-image: url("../img/gift-photo-mobile@1x.jpg"),
+    linear-gradient(to top, @color-main, @color-main);
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
   background-origin: content-box;
+
+  @media @tablet-only {
+    min-height: 200px;
+  }
+
+  @media @desktop {
+    width: 245 / 1440 * 100%;
+    min-height: 290px;
+  }
 }
 
 .action__link {
@@ -22,7 +32,7 @@
 
   font-size: 16px;
   line-height: 20px;
-  font-family: @arial;
+  font-family: @font-extra;
   text-align: center;
   color: rgb(255, 255, 255);
 
@@ -37,5 +47,17 @@
     height: 65px;
 
     transform: translateX(50%);
+  }
+
+  @media @tablet-only {
+    margin-right: 125px;
+    margin-bottom: auto;
+    margin-left: auto;
+
+    text-align: left;
+
+    &::before {
+      left: 90px;
+    }
   }
 }

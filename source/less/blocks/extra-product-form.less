@@ -1,7 +1,24 @@
+.extra-product-form {
+  @media @desktop {
+    width: 100%;
+  }
+}
+
 .extra-product-form__wrap {
   display: flex;
   flex-direction: column;
   padding: 0 @indent-mobile;
+
+  @media @tablet {
+    flex-flow: row wrap;
+    justify-content: space-between;
+    padding-right: 67 / 768 * 100%;
+    padding-left: 70 / 768 * 100%;
+  }
+
+  @media @desktop {
+    padding: 0 @indent-desktop;
+  }
 }
 
 .extra-product-form__legend {
@@ -30,7 +47,6 @@
 
   cursor: pointer;
 
-
   &::before {
     content: "";
     position: absolute;
@@ -39,41 +55,31 @@
 
     width: 30px;
     height: 30px;
+    padding: 14px;
 
+    background: url("../../img/icon-tick.svg") no-repeat center center;
+    background-origin: content-box;
     border: 1px solid rgb(205, 205, 205);
     transform: translateY(-50%);
-  }
 
-  &::after {
-    content: "";
-    position: absolute;
-    top: 50%;
-    left: 13px;
-
-    width: 14px;
-    height: 8px;
-
-    border-bottom: 2px solid @color-main;
-    border-left: 2px solid @color-main;
-    transform: translateY(-50%) scale(0) rotate(-45deg);
-    transform-origin: left bottom;
-
-    transition: all 0.1s ease-in;
-  }
-
-  &:hover::before,
-  &:focus::before,
-  &:active::before {
-    border: 1px solid rgb(186, 186, 186);
+    transition: all 0.15s ease-in;
   }
 
   &:active {
     opacity: 0.3;
   }
+
+  @media @tablet {
+    width: 37.37%;
+  }
+
+  @media @desktop {
+    width: 245 / 1220 * 100%;
+  }
 }
 
-input[type="checkbox"]:checked + .extra-product-form__label::after {
-  transform: translateY(-50%) scale(1) rotate(-45deg);
+input[type="checkbox"]:checked + .extra-product-form__label::before {
+  padding: 3px;
 }
 
 input[type="checkbox"]:focus + .extra-product-form__label::before {

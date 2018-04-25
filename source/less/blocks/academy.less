@@ -4,12 +4,16 @@
   align-items: center;
   width: 100%;
   min-height: 80px;
+
+  @media @tablet {
+    width: 162px;
+  }
 }
 
 .academy__name {
-  font-family: @arial;
   font-size: 16px;
   line-height: 16px;
+  font-family: @font-extra;
   color: @text-light;
 }
 
@@ -17,4 +21,16 @@
   display: block;
   width: 28px;
   height: 35px;
+
+  fill: rgb(102, 102, 102);
+
+  &:hover,
+  &focus,
+  &:active {
+    fill: @color-main;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }

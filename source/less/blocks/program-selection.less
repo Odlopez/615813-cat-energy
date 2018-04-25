@@ -6,6 +6,14 @@
   font-weight: 400;
   font-size: 36px;
   line-height: 60px;
+
+  @media @tablet {
+    padding: 0 @indent-tablet;
+  }
+
+  @media @desktop {
+    padding: 0 @indent-desktop;
+  }
 }
 
 .program-selection__decription {
@@ -15,4 +23,17 @@
   font-size: 14px;
   line-height: 18px;
   text-transform: uppercase;
+
+  @media @tablet {
+    padding-right: 46%;
+    padding-left: 9.1%;
+
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  @media @desktop {
+    padding-right: 69.7%;
+    padding-left: @indent-desktop;
+  }
 }

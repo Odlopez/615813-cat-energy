@@ -1,9 +1,33 @@
 .contact-user-form {
   margin-top: 30px;
+
+  @media @desktop {
+    width: 100%;
+  }
+}
+
+.contact-user-form__container {
+  @media @desktop {
+    width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    padding: 0 @indent-desktop;
+  }
 }
 
 .contact-user-form__wrap {
   .form-wrap();
+
+  @media @tablet {
+    padding-right: 67 / 768 * 100%;
+    padding-left: 70 / 768 * 100%;
+  }
+
+  @media @desktop {
+    padding: 0;
+    width: 570 / 1220 * 100%;
+  }
 }
 
 .contact-user-form__label {

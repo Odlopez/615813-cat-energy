@@ -1,18 +1,19 @@
-.feed-back-form__wrap {
-  padding: 0 @indent-mobile;
+.feed-back-form {
+  @media @desktop {
+    width: 100%;
+  }
 }
 
-.feed-back-form__legend {
-  padding: 5px 0;
-  padding-left: @indent-mobile;
+.feed-back-form__wrap {
+  padding: 0 @indent-mobile;
 
-  &::after,
-  &::before {
-    top: 50%;
+  @media @tablet {
+    padding-right: 67 / 768 * 100%;
+    padding-left: 70 / 768 * 100%;
   }
 
-  &::after {
-    margin-left: 21px;
+  @media @desktop {
+    padding: 0 @indent-desktop;
   }
 }
 

@@ -1,9 +1,20 @@
 //out: false
 //ПЕРЕМЕННЫЕ
-@indent-mobile: 6.25%;
-@cell-mobile: 50%;
-@oswald: "Oswald", "Arial", "Helvetica", sans-serif;
-@arial: "Arial", "Helvetica", sans-serif;
+@small-cell-m: 6.25%;
+@small-cell-t: 30 / 708 * 100%;
+@small-cell-d: 40 / 1220 * 100%;
+@cell-m: 50%;
+@cell-t: 132 / 708 * 100%;
+@cell-d: 245 / 1220 * 100%;
+@indent-mobile: @small-cell-m;
+@indent-tablet: 3.90625%;
+@indent-desktop: 40px;
+@font-main: "Oswald", "Arial", "Helvetica", sans-serif;
+@font-extra: "Arial", "Helvetica", sans-serif;
 @color-main: rgb(104, 183, 56);
 @text-light: rgb(68, 68, 68);
 @text-dark: rgb(17, 17, 17);
+@mobile: ~"max-width: 768px";
+@tablet: ~"(min-width: 768px)";
+@tablet-only: ~"(min-width: 768px) and (max-width: 1299px)";
+@desktop: ~"(min-width: 1300px)";

@@ -3,10 +3,27 @@
   margin-top: 25px;
 
   border-bottom: 1px solid rgb(237, 237, 237);
+
+  @media @tablet {
+    padding-right: 67 / 768 * 100%;
+    padding-left: 70 / 768 * 100%;
+
+    border-bottom: none;
+  }
+
+  @media @desktop {
+    width: 570 / 1440 * 100%;
+    padding: 0;
+    margin-left: @indent-desktop;
+  }
 }
 
 .user-form__wrap {
   .form-wrap();
+
+  @media @tablet {
+    padding: 0;
+  }
 }
 
 .user-form__label {
