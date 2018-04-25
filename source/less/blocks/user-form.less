@@ -2,43 +2,39 @@
   width: 100%;
   margin-top: 25px;
 
-  border-bottom: 1px solid rgb(237, 237, 237);
-
   @media @tablet {
-    padding-right: 67 / 768 * 100%;
-    padding-left: 70 / 768 * 100%;
-
-    border-bottom: none;
+    margin-top: 46px;
+    padding-right: 5.65%;
+    padding-left: 5.65%;
   }
 
   @media @desktop {
-    width: 570 / 1440 * 100%;
+    width: 570px;
     padding: 0;
-    margin-left: @indent-desktop;
   }
 }
 
 .user-form__wrap {
   .form-wrap();
 
+  margin-right: @indent-mobile;
+  margin-left: @indent-mobile;
+
   @media @tablet {
+    margin-right: 0;
+    margin-left: 0;
     padding: 0;
   }
 }
 
 .user-form__label {
-  margin-right: 14px;
-
-  font-size: 16px;
-  line-height: 18px;
-  color: @text-dark * 2;
-  text-transform: uppercase;
-
-  &[for="user-weight"] {
-    margin-right: 17px;
-  }
+  margin-right: 17px;
 }
 
 .user-form__input {
   padding-left: 15px;
+
+  @media @tablet {
+    padding-left: 20px;
+  }
 }

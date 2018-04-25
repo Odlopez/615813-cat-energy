@@ -2,8 +2,11 @@
   display: flex;
   flex-direction: column;
   width: 100%;
+}
 
+.form__container {
   @media @desktop {
+    display: flex;
     flex-flow: row wrap;
     justify-content: space-between;
   }
@@ -27,13 +30,16 @@
 
   @media @tablet {
     flex-direction: row;
-    justify-content: space-between;
+    margin-top: 41px;
+    margin-bottom: 72px;
     padding-right: 67 / 768 * 100%;
     padding-left: 70 / 768 * 100%;
   }
 
   @media @desktop {
     width: 100%;
+    margin-top: 49px;
+    margin-bottom: 81px;
     padding: 0 @indent-desktop;
   }
 }
@@ -42,11 +48,12 @@
   width: 100%;
 
   @media @tablet {
-    width: 37.37%;
+    width: 44.7%;
+    padding: 0 60px;
   }
 
   @media @desktop {
-    width: 570 / 1220 * 100%;
+    min-width: 570px;
   }
 }
 
@@ -60,9 +67,15 @@
 
   @media @tablet {
     width: 37.37%;
+    margin-top: 0;
+    margin-right: auto;
+    margin-left: 9.5%;
+
+    font-size: 16px;
   }
 
   @media @desktop {
-    width: 570 / 1220 * 100%;
+    width: 570px;
+    margin-left: 80px;
   }
 }

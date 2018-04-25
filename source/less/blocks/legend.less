@@ -34,15 +34,23 @@
   }
 
   @media @tablet {
+    margin-bottom: 70px;
     padding-right: 67 / 768 * 100%;
     padding-left: 70 / 768 * 100%;
 
     font-size: 36px;
     line-height: 36px;
+
+    &::after,
+    &::before {
+      top: 21px;
+    }
   }
 
   @media @desktop {
     max-width: 1300px;
+    min-height: 48px;
+    margin: 0 auto;
     padding: 0 @indent-desktop;
   }
 }
