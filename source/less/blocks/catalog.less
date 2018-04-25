@@ -1,10 +1,6 @@
 .catalog {
   display: flex;
   flex-direction: column;
-
-  @media @desktop {
-    padding: 0 @indent-desktop;
-  }
 }
 
 .catalog__title {
@@ -23,6 +19,10 @@
 
     font-size: 60px;
     line-height: 60px;
+  }
+
+  @media @desktop {
+    margin-top: 12px;
   }
 }
 

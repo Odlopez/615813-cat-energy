@@ -8,6 +8,7 @@
   @media @desktop {
     display: flex;
     flex-flow: row wrap;
+    margin-bottom: 86px;
   }
 }
 
@@ -38,6 +39,11 @@
       margin-left: calc(-100vw ~ "- 37px");
     }
   }
+
+  @media @desktop {
+    margin-top: 77px;
+    padding-left: 39px;
+  }
 }
 
 .extra-products__list {
@@ -54,10 +60,8 @@
   }
 
   @media @desktop {
-    width: 1005 / 1440 * 100%;
+    width: @cell-d * 3 + @small-cell-d * 4;
     margin: 0;
-    padding: 0;
-    padding-left: @indent-desktop;
   }
 }
 
@@ -67,11 +71,8 @@
   @media @tablet {
     padding: 27px 5.226%;
   }
-}
 
-.extra-products__action {
   @media @desktop {
-    margin-right: @indent-desktop;
-    margin-left: auto;
+    padding: 0;
   }
 }

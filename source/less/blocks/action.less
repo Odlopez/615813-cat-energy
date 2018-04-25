@@ -19,7 +19,7 @@
   }
 
   @media @desktop {
-    width: 245 / 1440 * 100%;
+    width: @cell-d;
     min-height: 290px;
   }
 }
@@ -56,6 +56,12 @@
 
     &::before {
       left: 90px;
+    }
+  }
+
+  @media @desktop {
+    &::before {
+      transform: translateX(50%);
     }
   }
 }
