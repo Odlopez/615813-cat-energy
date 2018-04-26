@@ -1,6 +1,12 @@
 .container {
-  width: 100%;
   position: relative;
+
+  width: 100%;
+  padding: 0 @indent-mobile;
+
+  &--not-padding {
+    padding: 0;
+  }
 
   @media @tablet {
     padding: 0 @indent-tablet;
@@ -8,7 +14,14 @@
 
   @media @desktop {
     max-width: 1300px;
-    padding: 0 @indent-desktop;
     margin: 0 auto;
+    padding: 0 @indent-desktop;
+
+    &--extra-products {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      min-height: 72px;
+    }
   }
 }

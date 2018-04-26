@@ -34,17 +34,24 @@
 
   &--vk {
     height: 12px;
-
-    background: url("../img/icon-vk-mobile.svg") no-repeat center;
   }
 
   &--instagram {
     height: 17px;
-
-    background: url("../img/icon-insta-mobile.svg") no-repeat center;
   }
 
-  &--facebook {
-    background: url("../img/icon-fb-mobile.svg") no-repeat center;
+  &:hover .social-nav__svg,
+  &:focus .social-nav__svg {
+    fill: @color-main;
+  }
+}
+
+.social-nav__svg {
+  width: 100%;
+  height: 100%;
+  fill: rgb(102, 102, 102);
+
+  &:active {
+    fill-opacity: 0.3;
   }
 }

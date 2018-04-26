@@ -1,5 +1,15 @@
 .contacts {
   position: relative;
+
+  background-color: rgb(255, 255, 255);
+
+  @media @tablet {
+    background-color: rgb(242, 242, 242);
+
+    &--index {
+      background-color: rgb(255, 255, 255);
+    }
+  }
 }
 
 .contacts__wrap {
@@ -8,19 +18,11 @@
   align-items: center;
   width: 100%;
   min-height: 114px;
-  padding: 12px @indent-mobile;
-
-  background-color: rgb(255, 255, 255);
+  padding: 12px 0;
 
   @media @tablet {
     min-height: 204px;
     padding: 0 5.65%;
-
-    background-color: rgb(242, 242, 242);
-
-    &--index {
-      background-color: rgb(255, 255, 255);
-    }
   }
 
   @media @desktop {
@@ -32,6 +34,7 @@
     padding: 0;
 
     transform: translate(0);
+    background-color: rgb(255, 255, 255);
   }
 }
 

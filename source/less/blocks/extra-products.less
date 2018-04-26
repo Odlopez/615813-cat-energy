@@ -1,97 +1,78 @@
 .extra-products {
   margin-bottom: 33px;
 
+  @media @tablet {
+    margin-bottom: 75px;
+  }
+
   @media @desktop {
     display: flex;
     flex-flow: row wrap;
+    margin-bottom: 86px;
   }
 }
 
 .extra-products__title {
-  position: relative;
-
   margin-top: 29px;
   margin-bottom: 33px;
   padding: 0 @indent-mobile;
-  overflow: hidden;
 
   font-weight: 400;
-  font-size: 24px;
-  line-height: 24px;
-  color: @text-dark;
-
-  &::after,
-  &::before {
-    content: "";
-    position: absolute;
-    top: 50%;
-
-    width: 100%;
-    height: 3px;
-
-    background-color: @color-main;
-    transform: translateY(-50%);
-  }
 
   &::after {
-    margin-left: 22px;
-  }
-
-  &::before {
-    margin-left: ~"calc(-100% - 25px)";
-
-    background-color: @color-main;
+    margin-left: 21px;
   }
 
   @media @tablet {
-    padding-right: @indent-tablet;
-    padding-left: 8.46%;
+    margin-top: 66px;
+    margin-bottom: 81px;
+    padding-left: 67px;
 
     &::after {
-      margin-left: 40px;
+      top: 22px;
+
+      margin-left: 35px;
     }
 
     &::before {
-      margin-left: ~"calc(-100% - 35px)";
+      top: 22px;
+      margin-left: calc(-100vw ~ "- 37px");
     }
   }
 
   @media @desktop {
-    width: 100%;
-    padding-left: @indent-desktop;
+    margin-top: 77px;
+    padding-left: 39px;
   }
 }
 
 .extra-products__list {
+  .without_indentation();
+
   display: flex;
   flex-direction: column;
   margin-bottom: 40px;
-  padding: 0 @indent-mobile;
 
   list-style: none;
 
   @media @tablet {
-    padding: 0 @indent-tablet;
+    margin-bottom: 68px;
   }
 
   @media @desktop {
-    width: 1005 / 1440 * 100%;
+    width: @cell-d * 3 + @small-cell-d * 4;
     margin: 0;
-    padding: 0;
-    padding-left: @indent-desktop;
   }
 }
 
-.extra-products__action {
-  padding: 0 @indent-mobile;
+.extra-products__item {
+  padding: 12px 0 17px;
 
   @media @tablet {
-    padding: 0 @indent-tablet;
+    padding: 27px 5.226%;
   }
 
   @media @desktop {
-    margin-right: @indent-desktop;
-    margin-left: auto;
     padding: 0;
   }
 }

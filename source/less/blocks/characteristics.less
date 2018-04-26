@@ -3,6 +3,11 @@
   line-height: 14px;
   font-family: @font-extra;
   color: @text-light;
+
+  @media @tablet {
+    font-size: 16px;
+    line-height: 16px;
+  }
 }
 
 .characteristics__title {
@@ -16,8 +21,10 @@
   text-transform: uppercase;
 
   @media @tablet {
-    padding: 0 27.5%;
+    margin-bottom: 23px;
+    padding: 0 22%;
 
+    font-size: 20px;
     text-align: center;
   }
 
@@ -30,7 +37,7 @@
   text-align: left;
 
   @media @tablet {
-    padding: 10px 0;
+    padding: 6px 0;
 
     border-bottom: 1px solid rgb(205, 205, 205);
   }
@@ -40,7 +47,7 @@
   text-align: right;
 
   @media @tablet {
-    padding: 10px 0;
+    padding: 6px 0;
 
     border-bottom: 1px solid rgb(205, 205, 205);
   }

@@ -1,10 +1,18 @@
 .feed-back-form {
+  padding-bottom: 27px;
+
   @media @desktop {
     width: 100%;
   }
 }
 
-.feed-back-form__wrap {
+.feed-back-form__legend {
+  @media @desktop {
+    margin-bottom: 64px;
+  }
+}
+
+.feed-back-form__container {
   padding: 0 @indent-mobile;
 
   @media @tablet {
@@ -23,4 +31,9 @@
   padding-left: 15px;
 
   resize: vertical;
+
+  @media @tablet {
+    min-height: 175px;
+    padding: 17px 19px;
+  }
 }

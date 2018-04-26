@@ -10,7 +10,7 @@
     <!-- HEADER -->
     <header class="header">
       <!-- container -->
-      <div class="container">
+      <div class="container container--not-padding">
         <!-- main-nav -->
         <nav class="main-nav">
           <div class="main-nav__wrap">
@@ -66,81 +66,85 @@
       <h1 class="visuallyhidden">Интернет магизан питания для котов Cat Energy</h1>
       <!-- PROGRAM-SELECTION -->
       <section class="program-selection">
-        <h2 class="program-selection__title">Подбор программы</h2>
-        <p class="program-selection__decription">Заполните анкету и мы подберем  программу питания для вашего кота</p>
+        <div class="container">
+          <h2 class="program-selection__title">Подбор программы</h2>
+          <p class="program-selection__decription">Заполните анкету и мы подберем  программу питания для вашего кота</p>
+        </div>
         <!-- form -->
         <form class="program-selection__form form" action="https://echo.htmlacademy.ru" method="post">
-          <!-- user-form -->
-          <fieldset class="form__item user-form">
-            <div class="user-form__wrap">
-              <label class="user-form__label" for="user-name">Имя:*</label>
-              <input class="user-form__input input-text" id="user-name" name="user-name" type="text" placeholder="БАРСИК" pattern="^[A-Za-zА-Яа-яЁё\s]+$" required>
-            </div>
-            <div class="user-form__wrap">
-              <label class="user-form__label" for="user-weight">Вес&nbsp;(кг):*</label>
-              <input class="user-form__input input-text" id="user-weight" name="user-weight" type="text" placeholder="7" pattern="[0-9]{1,3}" required>
-            </div>
-            <div class="user-form__wrap">
-              <label class="user-form__label" for="user-age">Возраст&nbsp;(лет):</label>
-              <input class="user-form__input input-text" id="user-age" name="user-age" type="text" placeholder="7">
-            </div>
-          </fieldset>
-          <!-- program-form -->
-          <fieldset class="form__item program-form">
-            <div class="program-form__wrap">
-              <input class="visuallyhidden" type="radio" id="slim-program" name="program" value="slim-program" checked>
-              <label class="program-form__label" for="slim-program">похудение</label>
-            </div>
-            <div class="program-form__wrap">
-              <input class="visuallyhidden" type="radio" id="pro-program" name="program" value="pro-program">
-              <label class="program-form__label" for="pro-program">набор массы</label>
-            </div>
-            <div class="program-form__wrap">
-              <input class="visuallyhidden" type="radio" id="unknow-program" name="program" value="unknow-program">
-              <label class="program-form__label" for="unknow-program">не знаю (нужен ваш совет)</label>
-            </div>
-          </fieldset>
+          <div class="container container--not-padding form__container">
+            <!-- user-form -->
+            <fieldset class="form__item user-form">
+              <div class="user-form__wrap">
+                <label class="user-form__label label" for="user-name">Имя:*</label>
+                <input class="user-form__input input-text" id="user-name" name="user-name" type="text" placeholder="БАРСИК" pattern="^[A-Za-zА-Яа-яЁё\s]+$" required>
+              </div>
+              <div class="user-form__wrap">
+                <label class="user-form__label label" for="user-weight">Вес&nbsp;(кг):*</label>
+                <input class="user-form__input input-text" id="user-weight" name="user-weight" type="text" placeholder="7" pattern="[0-9]{1,3}" required>
+              </div>
+              <div class="user-form__wrap">
+                <label class="user-form__label label" for="user-age">Возраст&nbsp;(лет):</label>
+                <input class="user-form__input input-text" id="user-age" name="user-age" type="text" placeholder="7">
+              </div>
+            </fieldset>
+            <!-- program-form -->
+            <fieldset class="form__item program-form">
+              <div class="program-form__wrap">
+                <input class="visuallyhidden" type="radio" id="slim-program" name="program" value="slim-program" checked>
+                <label class="program-form__label label" for="slim-program">похудение</label>
+              </div>
+              <div class="program-form__wrap">
+                <input class="visuallyhidden" type="radio" id="pro-program" name="program" value="pro-program">
+                <label class="program-form__label label" for="pro-program">набор массы</label>
+              </div>
+              <div class="program-form__wrap">
+                <input class="visuallyhidden" type="radio" id="unknow-program" name="program" value="unknow-program">
+                <label class="program-form__label label" for="unknow-program">не знаю (нужен ваш совет)</label>
+              </div>
+            </fieldset>
+          </div>
           <!-- contact-user-form -->
           <fieldset class="form__item contact-user-form">
-          <div class="wrap-legend">
-            <legend class="contact-user-form__legend legend">Контактные данные (владельца&nbsp;кота)</legend>
-          </div>
-            <div class="contact-user-form__container">
+            <legend class="contact-user-form__wrap-legend wrap-legend">
+              <span class="contact-user-form__legend legend">Контактные данные (владельца&nbsp;кота)</span>
+            </legend>
+            <div class="container contact-user-form__container">
               <div class="contact-user-form__wrap">
-                <label class="contact-user-form__label" for="user-email">E-mail:*</label>
+                <label class="contact-user-form__label label" for="user-email">E-mail:*</label>
                 <input class="contact-user-form__input input-text" type="email" id="user-email" name="user-email" placeholder="kuklachev@gmail.com" required>
               </div>
               <div class="contact-user-form__wrap">
-                <label class="contact-user-form__label" for="user-tel">Телефон:*</label>
+                <label class="contact-user-form__label label" for="user-tel">Телефон:*</label>
                 <input class="contact-user-form__input input-text" type="tel" id="user-tel" name="user-tel" placeholder="8 (960) 900-60-90"  pattern="\d{1}\s?[\(]{0,1}\d[0-9]{2}[\)]{0,1}\s?\d{3}[-]{0,1}\d{2}[-]{0,1}\d{2}" required >
               </div>
           </div>
           </fieldset>
           <!-- feed-back-form -->
           <fieldset class="form__item feed-back-form">
-            <div class="wrap-legend">
-              <legend class="feed-back-form__legend legend">Комментарий</legend>
-            </div>
-            <div class="feed-back-form__wrap">
+            <legend class="feed-back-form__wrap-legend wrap-legend">
+              <span  class="feed-back-form__legend legend">Комментарий</span>
+            </legend>
+            <div class="container feed-back-form__container">
               <textarea class="feed-back-form__text input-text" name="feed-back" id="feed-back" cols="30" rows="10" placeholder="Расскажите обо всех повадках кота"></textarea>
             </div>
           </fieldset>
           <fieldset class="form__item extra-product-form">
-            <div class="wrap-legend">
-              <legend class="extra-product-form__legend legend">Дополнительно</legend>
-            </div>
-            <div class="extra-product-form__wrap">
+            <legend class="extra-product-form__wrap-legend wrap-legend">
+              <span  class="extra-product-form__legend legend">Дополнительно</span>
+            </legend>
+            <div class="container extra-product-form__container">
               <input class="visuallyhidden" type="checkbox" id="sweetener" name="sweetener" checked>
-              <label class="extra-product-form__label" for="sweetener">Сахарозаменитель</label>
+              <label class="extra-product-form__label label" for="sweetener">Сахарозаменитель</label>
               <input class="visuallyhidden" type="checkbox" id="water" name="water">
-              <label class="extra-product-form__label" for="water">Питьевая вода</label>
+              <label class="extra-product-form__label label" for="water">Питьевая вода</label>
               <input class="visuallyhidden" type="checkbox" id="milk" name="milk">
-              <label class="extra-product-form__label" for="milk">Молоко</label>
+              <label class="extra-product-form__label label" for="milk">Молоко</label>
               <input class="visuallyhidden" type="checkbox" id="vitamins" name="vitamins">
-              <label class="extra-product-form__label" for="vitamins">Витамины</label>
+              <label class="extra-product-form__label label" for="vitamins">Витамины</label>
             </div>
           </fieldset>
-          <div class="form__wrap">
+          <div class="container form__wrap">
             <button class="form__btn button" type="submit">Отправить заявку</button>
             <span class="form__comment">* — Обязательные поля</span>
           </div>
@@ -149,64 +153,111 @@
       <!-- CONTACTS -->
       <section class="contacts">
         <h2 class="visuallyhidden">Наше местоположение</h2>
-        <div class="contacts__wrap">
-          <p class="contacts__invite">
-            приглашаем к&nbsp;сотрудничеству  дилеров!
-          </p>
-          <!-- location -->
-          <p class="contacts__location location">
-            <span class="location__address street-address">ул. Большая Конюшенная, д. 19/8</span>
-            <span class="location__city locality">Санкт-Петербург</span>
-          </p>
+        <!-- container -->
+        <div class="container">
+          <div class="contacts__wrap contacts__wrap--index">
+            <p class="contacts__invite">
+              приглашаем к&nbsp;сотрудничеству  дилеров!
+            </p>
+            <!-- location -->
+            <p class="contacts__location location">
+              <span class="location__address street-address">ул. Большая Конюшенная, д. 19/8</span>
+              <span class="location__city locality">Санкт-Петербург</span>
+            </p>
+          </div>
         </div>
         <!-- map -->
         <div class="contacts__map map">
           <img class="map__image" src="img/bg-map-mobile@1x.png" alt="ул. Большая Конюшенная, д. 19/8  Санкт-Петербург" width="320" height="360">
           <!-- тут будет iframe -->
+          <iframe class="iframe" src="https://snazzymaps.com/embed/67069" width="1300" height="400" style="border:none;"></iframe>
         </div>
       </section>
     </main>
     <!-- FOOTER -->
     <footer class="footer">
       <!-- container -->
-      <div class="container footer__wrap">
-        <svg class="footer__logo footer-logo-svg"  width="128" height="24" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 127.8 23.4" style="enable-background:new 0 0 127.8 23.4;" xml:space="preserve">
-          <g>
-            <path
-              class="footer-logo-svg__st1"
-              d="M1.6,21.5c-1-1.3-1.6-3.2-1.6-5.6V7.6c0-2.5,0.5-4.4,1.5-5.7C2.6,0.6,4.3,0,6.8,0c2.4,0,4.1,0.6,5.1,1.7
-            c1,1.1,1.5,2.8,1.5,4.9v2H8.5V6.3c0-0.9-0.1-1.6-0.3-2S7.6,3.5,6.8,3.5c-0.7,0-1.2,0.2-1.4,0.7S5.1,5.5,5.1,6.4v10.7
-            c0,0.9,0.1,1.6,0.4,2.1c0.2,0.5,0.7,0.7,1.4,0.7c0.7,0,1.1-0.2,1.3-0.7c0.2-0.5,0.3-1.2,0.3-2.1v-2.4h4.9v2c0,2.1-0.5,3.8-1.5,5
-            c-1,1.2-2.7,1.8-5.1,1.8C4.4,23.4,2.6,22.8,1.6,21.5z"/>
-            <path class="footer-logo-svg__st1" d="M19.3,0.3h5.7l4.2,22.8h-4.6l-0.8-4.8h-3.3l-0.8,4.8H15L19.3,0.3z M23.4,15.3l-1.2-8.9L21,15.3H23.4z"/>
-            <path class="footer-logo-svg__st1" d="M32.7,4.1h-3.4V0.3h11.9v3.7h-3.4v19.1h-5.1V4.1z"/>
-            <path class="footer-logo-svg__st1" d="M50.3,0.3h8.8v2.4h-5.7v7.5h4.6v2.3h-4.6v8.4h5.7v2.3h-8.9V0.3z"/>
-            <path class="footer-logo-svg__st1" d="M61.7,0.3h2.2l6.5,15.1V0.3h2.6v22.8h-2L64.4,7.5v15.6h-2.7V0.3z"/>
-            <path class="footer-logo-svg__st1" d="M76,0.3h8.8v2.4h-5.7v7.5h4.6v2.3h-4.6v8.4h5.7v2.3H76V0.3z"/>
-            <path
-              class="footer-logo-svg__st1"
-              d="M87.4,0.3H92c2.3,0,4,0.5,5.1,1.4c1.1,0.9,1.6,2.5,1.6,4.6c0,2.9-0.9,4.7-2.8,5.3l3.2,11.4H96l-3-10.7h-2.5
-            v10.7h-3.2V0.3z M91.8,10.1c1.4,0,2.3-0.3,2.9-0.8c0.6-0.5,0.9-1.5,0.9-3c0-0.9-0.1-1.7-0.3-2.2c-0.2-0.5-0.6-0.9-1.1-1.2
-            c-0.5-0.3-1.3-0.4-2.2-0.4h-1.4v7.5H91.8z"/>
-            <path
-              class="footer-logo-svg__st1"
-              d="M102.7,21.4c-0.9-1.3-1.4-3.2-1.4-5.8V8c0-1.8,0.2-3.2,0.5-4.3c0.4-1.1,1-2,1.9-2.6s2.1-0.9,3.7-0.9
-            c2.1,0,3.6,0.5,4.5,1.6s1.4,2.7,1.4,5v0.8h-3V6.9c0-1.1-0.1-1.9-0.2-2.5c-0.1-0.6-0.4-1-0.8-1.3c-0.4-0.3-1-0.5-1.9-0.5
-            c-0.9,0-1.5,0.2-2,0.6s-0.7,0.9-0.8,1.6s-0.2,1.6-0.2,2.7V16c0,1.7,0.2,3,0.6,3.8c0.4,0.8,1.2,1.1,2.4,1.1c1.2,0,2-0.4,2.4-1.2
-            c0.4-0.8,0.7-2.1,0.7-4v-1.6h-2.9v-2.3h5.8v11.3h-2l-0.3-2.6c-0.7,1.9-2.1,2.9-4.1,2.9C105.1,23.4,103.6,22.7,102.7,21.4z"/>
-            <path class="footer-logo-svg__st1" d="M119.8,15.1l-4.9-14.7h3l3.5,11l3.4-11h3l-4.9,14.7v8h-3V15.1z"/>
-          </g>
-        </svg>
+      <div class="footer__wrap">
+        <a href="index.html" class="footer__logo-link">
+          <svg class="footer__logo-svg footer-logo-svg"  width="128" height="24" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 127.8 23.4" style="enable-background:new 0 0 127.8 23.4;" xml:space="preserve">
+            <g>
+              <path
+                class="footer-logo-svg__st1"
+                d="M1.6,21.5c-1-1.3-1.6-3.2-1.6-5.6V7.6c0-2.5,0.5-4.4,1.5-5.7C2.6,0.6,4.3,0,6.8,0c2.4,0,4.1,0.6,5.1,1.7
+              c1,1.1,1.5,2.8,1.5,4.9v2H8.5V6.3c0-0.9-0.1-1.6-0.3-2S7.6,3.5,6.8,3.5c-0.7,0-1.2,0.2-1.4,0.7S5.1,5.5,5.1,6.4v10.7
+              c0,0.9,0.1,1.6,0.4,2.1c0.2,0.5,0.7,0.7,1.4,0.7c0.7,0,1.1-0.2,1.3-0.7c0.2-0.5,0.3-1.2,0.3-2.1v-2.4h4.9v2c0,2.1-0.5,3.8-1.5,5
+              c-1,1.2-2.7,1.8-5.1,1.8C4.4,23.4,2.6,22.8,1.6,21.5z"/>
+              <path class="footer-logo-svg__st1" d="M19.3,0.3h5.7l4.2,22.8h-4.6l-0.8-4.8h-3.3l-0.8,4.8H15L19.3,0.3z M23.4,15.3l-1.2-8.9L21,15.3H23.4z"/>
+              <path class="footer-logo-svg__st1" d="M32.7,4.1h-3.4V0.3h11.9v3.7h-3.4v19.1h-5.1V4.1z"/>
+              <path class="footer-logo-svg__st1" d="M50.3,0.3h8.8v2.4h-5.7v7.5h4.6v2.3h-4.6v8.4h5.7v2.3h-8.9V0.3z"/>
+              <path class="footer-logo-svg__st1" d="M61.7,0.3h2.2l6.5,15.1V0.3h2.6v22.8h-2L64.4,7.5v15.6h-2.7V0.3z"/>
+              <path class="footer-logo-svg__st1" d="M76,0.3h8.8v2.4h-5.7v7.5h4.6v2.3h-4.6v8.4h5.7v2.3H76V0.3z"/>
+              <path
+                class="footer-logo-svg__st1"
+                d="M87.4,0.3H92c2.3,0,4,0.5,5.1,1.4c1.1,0.9,1.6,2.5,1.6,4.6c0,2.9-0.9,4.7-2.8,5.3l3.2,11.4H96l-3-10.7h-2.5
+              v10.7h-3.2V0.3z M91.8,10.1c1.4,0,2.3-0.3,2.9-0.8c0.6-0.5,0.9-1.5,0.9-3c0-0.9-0.1-1.7-0.3-2.2c-0.2-0.5-0.6-0.9-1.1-1.2
+              c-0.5-0.3-1.3-0.4-2.2-0.4h-1.4v7.5H91.8z"/>
+              <path
+                class="footer-logo-svg__st1"
+                d="M102.7,21.4c-0.9-1.3-1.4-3.2-1.4-5.8V8c0-1.8,0.2-3.2,0.5-4.3c0.4-1.1,1-2,1.9-2.6s2.1-0.9,3.7-0.9
+              c2.1,0,3.6,0.5,4.5,1.6s1.4,2.7,1.4,5v0.8h-3V6.9c0-1.1-0.1-1.9-0.2-2.5c-0.1-0.6-0.4-1-0.8-1.3c-0.4-0.3-1-0.5-1.9-0.5
+              c-0.9,0-1.5,0.2-2,0.6s-0.7,0.9-0.8,1.6s-0.2,1.6-0.2,2.7V16c0,1.7,0.2,3,0.6,3.8c0.4,0.8,1.2,1.1,2.4,1.1c1.2,0,2-0.4,2.4-1.2
+              c0.4-0.8,0.7-2.1,0.7-4v-1.6h-2.9v-2.3h5.8v11.3h-2l-0.3-2.6c-0.7,1.9-2.1,2.9-4.1,2.9C105.1,23.4,103.6,22.7,102.7,21.4z"/>
+              <path class="footer-logo-svg__st1" d="M119.8,15.1l-4.9-14.7h3l3.5,11l3.4-11h3l-4.9,14.7v8h-3V15.1z"/>
+            </g>
+          </svg>
+        </a>
         <!-- social-nav -->
         <ul class="footer__social social-nav">
           <li class="social-nav__item">
-            <a class="social-nav__link social-nav__link--vk" href="https://vk.com/htmlacademy" target="_blank">vkontakte</a>
+            <a class="social-nav__link social-nav__link--vk" href="https://vk.com/htmlacademy" target="_blank">
+              vkontakte
+              <svg class="social-nav__svg" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 22 12" style="enable-background:new 0 0 22 12;" xml:space="preserve">
+                <g>
+                  <path
+                    d="M17.6,12c-0.3,0-0.9-0.1-1.5-0.5c-0.5-0.3-0.9-0.7-1.3-1.2c-0.3-0.3-0.9-0.9-1.1-0.9c-0.2,0.1-0.4,0.7-0.3,1.2
+                  c0,0.1,0,0.6-0.3,0.9c-0.3,0.3-0.8,0.4-0.9,0.4l-1.4,0c-0.7,0-3.2-0.2-5.4-2.3C2.5,7.1,0.2,2.2,0.1,2C0,1.6-0.1,1.2,0.2,0.9
+                  c0.3-0.3,0.8-0.4,1-0.4l3,0l0.1,0c0.1,0,0.4,0.1,0.7,0.3c0.3,0.2,0.4,0.5,0.5,0.6c0,0,0.5,1.1,1.1,2c1,1.5,1.4,1.9,1.5,2
+                  C8.2,5,8.3,4,8.2,3.1c0-0.4-0.1-0.8-0.2-1C7.9,2,7.7,1.9,7.5,1.9L6.9,1.4C6.9,0.9,7.4,0.5,7.8,0.3C8.3,0.1,9.1,0,10.1,0l0.5,0
+                  c0.9,0,1.2,0.1,1.6,0.1c1.2,0.3,1.2,1.3,1.1,2.5c0,0.4,0,0.8,0,1.2c0,0.1,0,0.2,0,0.4c0,0.3,0,0.8,0.1,1c0.2-0.1,0.6-0.5,1.5-1.9
+                  c0.6-0.9,1-1.9,1.1-2.1l0,0c0.1-0.3,0.4-0.7,1.2-0.7l3.1,0c0,0,0.1,0,0.3,0c0.7,0,1.2,0.2,1.3,0.7c0.2,0.5,0.1,1.3-1.7,3.5
+                  c-0.3,0.3-0.5,0.6-0.7,0.9C19,6,18.6,6.6,18.6,6.7c0,0.1,0.5,0.5,0.9,0.9c1.1,0.9,1.9,1.7,2.2,2.3c0.4,0.6,0.3,1,0.2,1.3
+                  c-0.3,0.7-1.2,0.7-1.4,0.8l-2.8,0C17.7,12,17.6,12,17.6,12z M13.7,8.3c0.7,0,1.2,0.6,1.8,1.2c0.4,0.4,0.7,0.8,1.1,1
+                  c0.5,0.3,1,0.3,1,0.3l0.1,0l2.8,0c0.1,0,0.3-0.1,0.4-0.1c0,0,0-0.1-0.1-0.1c-0.3-0.5-1-1.3-2-2.1c-0.9-0.7-1.3-1.1-1.4-1.7
+                  c0-0.6,0.4-1.1,1.2-2.1c0.2-0.2,0.4-0.5,0.7-0.8c1.1-1.4,1.4-2,1.5-2.3c-0.1,0-0.5,0-0.5,0l-3.2,0c-0.1,0-0.2,0-0.2,0
+                  C16.9,2,16.4,3.1,15.8,4c-1.4,2.1-2,2.4-2.5,2.4c-0.1,0-0.3,0-0.4-0.1c-0.7-0.4-0.7-1.4-0.7-2.1c0-0.1,0-0.2,0-0.3
+                  c0-0.5,0-0.9,0-1.3c0.1-1.3,0-1.3-0.3-1.4c-0.3-0.1-0.5-0.1-1.4-0.1l-0.5,0c-0.5,0-1,0-1.4,0.1c0.1,0.1,0.1,0.1,0.2,0.2
+                  c0.4,0.5,0.4,1.5,0.4,1.7c0.1,1.3,0,2.9-0.7,3.3C8.4,6.4,8.3,6.5,8.1,6.5C7.5,6.5,6.8,5.8,5.6,4C5,2.9,4.5,1.8,4.5,1.8
+                  c0,0,0-0.1-0.1-0.1c-0.1,0-0.2-0.1-0.2-0.1l-2.9,0c0,0,0,0-0.1,0c0.4,0.9,2.5,5,4.8,7.2c2,1.9,4.3,2,4.7,2l1.4,0c0,0,0.2,0,0.2-0.1
+                  c0,0,0,0,0-0.1c0-0.2,0-2,1.2-2.3C13.5,8.3,13.6,8.3,13.7,8.3z"/>
+                </g>
+              </svg>
+            </a>
           </li>
           <li class="social-nav__item">
-            <a class="social-nav__link social-nav__link--instagram" href="https://www.instagram.com/htmlacademy/" target="_blank">instagram</a>
+            <a class="social-nav__link social-nav__link--instagram" href="https://www.instagram.com/htmlacademy/" target="_blank">
+              instagram
+              <svg class="social-nav__svg" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 16 16" style="enable-background:new 0 0 16 16;" xml:space="preserve">
+                <path class="st0" d="M11.8,1C13.6,1,15,2.4,15,4.2v7.7c0,1.7-1.4,3.1-3.1,3.1H4.2C2.4,15,1,13.6,1,11.8V4.2C1,2.4,2.4,1,4.2,1
+                L11.8,1 M11.8,0H4.2C1.9,0,0,1.9,0,4.2v7.7C0,14.1,1.9,16,4.2,16h7.7c2.3,0,4.2-1.9,4.2-4.2V4.2C16,1.9,14.1,0,11.8,0L11.8,0z"/>
+                <path class="st0" d="M8,4.9c1.7,0,3.1,1.4,3.1,3.1c0,1.7-1.4,3.1-3.1,3.1c-1.7,0-3.1-1.4-3.1-3.1C4.9,6.3,6.3,4.9,8,4.9 M8,3.9
+                C5.7,3.9,3.9,5.7,3.9,8s1.8,4.1,4.1,4.1s4.1-1.8,4.1-4.1S10.3,3.9,8,3.9L8,3.9z"/>
+                <circle class="st0" cx="12.3" cy="3.7" r="0.9"/>
+              </svg>
+            </a>
           </li>
           <li class="social-nav__item">
-            <a class="social-nav__link social-nav__link--facebook" href="https://www.facebook.com/htmlacademy/" target="_blank">facebook</a>
+            <a class="social-nav__link social-nav__link--facebook" href="https://www.facebook.com/htmlacademy/" target="_blank">
+              facebook
+              <svg class="social-nav__svg" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 10 19" style="enable-background:new 0 0 10 19;" xml:space="preserve">
+                <g>
+                  <path
+                    d="M7.1,19H2v-8.8H0V5.8h1.9c-0.1-2,0.2-3.4,1.1-4.4C3.8,0.5,5,0.1,6.5,0L10,0v4.2H7.2C7.1,4.4,7,5,7,5.8H10v4.4H7.1V19z
+                    M3.1,18h2.8V9.1h2.9V6.8H5.9l0-0.5c0-1.4,0-2.6,0.7-3.1l0.1-0.1h2.1V1H6.5c-1.2,0.1-2,0.4-2.6,1c-0.8,0.8-1,2.3-0.8,4.2l0.1,0.6
+                  H1.1v2.3h2V18z"/>
+                </g>
+              </svg>
+            </a>
           </li>
         </ul>
         <!-- academy -->
