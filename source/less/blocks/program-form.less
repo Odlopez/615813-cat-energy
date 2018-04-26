@@ -19,14 +19,14 @@
 .program-form__wrap {
   .form-wrap();
 
-  & + & {
+  &:not(:first-of-type) {
     margin-top: 25px;
   }
 
   @media @tablet {
     padding: 0 4.3%;
 
-    & + & {
+    &:not(:first-of-type) {
       margin-top: 35px;
     }
   }
