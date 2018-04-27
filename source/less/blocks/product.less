@@ -11,14 +11,16 @@
 }
 
 .product__image {
-  width: 140px;
+  @media @mobile-only {
+    width: 140px;
+  }
 
   @media @tablet {
     position: absolute;
-    top: 0;
     right: 50%;
 
-    transform: translateX(50%);
+    transform: translate(50%, -100%);
+    margin-top: -38px;
   }
 }
 

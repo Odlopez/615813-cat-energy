@@ -1,4 +1,6 @@
 .capital-block {
+  position: relative;
+
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -6,11 +8,24 @@
 
   color: rgb(255, 255, 255);
 
-  background-image: url("../img/index-background-mobile@1x.jpg"),
-    linear-gradient(to bottom, rgb(101, 169, 60) 0, rgb(101, 169, 60) 305px, transparent 305px);
-  background-repeat: no-repeat;
-  background-position: top;
-  background-size: cover 305px;
+  background: url("../img/index-background-mobile@1x.jpg") no-repeat top;
+  background-size: 320px 305px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    z-index: -1;
+
+    width: 100%;
+    height: 305px;
+
+    background-image: linear-gradient(to bottom, rgb(100, 168, 59) 0, rgb(100, 168, 59) 305px, transparent 305px);
+  }
+
+  @media @retina {
+    background-image: url("../img/index-background-mobile@2x.jpg");
+  }
 
   @media @tablet {
     position: relative;
@@ -23,6 +38,10 @@
     color: @text-dark;
 
     background: none;
+
+    &::before {
+      content: none;
+    }
   }
 
   @media @desktop {
@@ -74,7 +93,7 @@
   @media @tablet {
     position: absolute;
     right: 50%;
-    bottom: 0;
+    bottom: -29px;
     z-index: -1;
 
     width: auto;
@@ -84,8 +103,11 @@
   }
 
   @media @desktop {
-    top: 0;
-    right: 0;
+    top: -47px;
+    right: -116px;
+
+    width: 552px;
+    height: 499px;
   }
 }
 

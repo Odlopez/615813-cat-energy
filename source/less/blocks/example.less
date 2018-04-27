@@ -11,6 +11,7 @@
     position: relative;
 
     padding: 0;
+    overflow-x: hidden;
 
     background: transparent linear-gradient(to top, rgb(242, 242, 242) 462px, transparent 462px);
   }
@@ -18,8 +19,8 @@
   @media @desktop {
     flex-direction: row;
     justify-content: center;
+    margin-top: 0;
     padding-bottom: 0;
-    overflow-x: hidden;
   }
 }
 
@@ -44,21 +45,24 @@
   }
 
   @media @desktop {
-    width: 650px;
+    width: 610px;
     padding: 0 40px 69px 40px;
 
     background-color: transparent;
 
     &--content {
-      padding-right: 165px;
+      padding-right: 125px;
     }
 
     &--images {
+      width: 690px;
+      padding-left: 80px;
+
       &::after {
         content: "";
         position: absolute;
         bottom: 0;
-        left: 50%;
+        left: calc(50% ~"+ 18px");
 
         width: 100vw;
         height: 462px;
@@ -87,6 +91,7 @@
   }
 
   @media @desktop {
+    margin-top: 57px;
     margin-bottom: 146px;
   }
 }
@@ -170,7 +175,7 @@
   }
 
   @media @desktop {
-    margin-top: 520px;
+    margin-top: 561px;
   }
 }
 
@@ -190,7 +195,13 @@
     margin-top: 20px;
     margin-bottom: 20px;
 
+    @media @tablet {
+      top: -190px;
+      left: 51%;
+    }
+
     @media @desktop {
+      top: 3px;
       left: 0;
 
       margin: 0;
@@ -202,12 +213,17 @@
   &--after {
     @media @tablet {
       position: absolute;
-      bottom: 125px;
-      left: 0;
+      bottom: 114px;
+      left: 8px;
 
       display: block;
 
       transform: translateX(-50%);
+    }
+
+    @media @desktop {
+      bottom: 137px;
+      left: -18px;
     }
   }
 }
@@ -215,20 +231,25 @@
 .example__image-wrap {
   position: relative;
 
-
   width: 0;
 
   @media @tablet {
     position: absolute;
-    right: 0;
     bottom: 0;
+    left: 50%;
     z-index: 5;
 
-    width: 50%;
-    height: 462px;
+    width: 100%;
+    height: 658px;
     overflow-x: hidden;
 
-    background-color: rgb(234, 234, 234);
+    background-image: linear-gradient(to top, rgb(234, 234, 234) 462px, rgb(255, 255, 255) 462px);
+  }
+
+  @media @desktop {
+    left: calc(50% ~"+ 18px");
+
+    height: 100%;
   }
 }
 
