@@ -2,7 +2,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100%;
   min-height: 64px;
   margin: 0;
   padding: 0;
@@ -17,11 +16,13 @@
   }
 
   @media @tablet {
-    width: auto;
-    min-height: 150px;
-    margin: 0 auto;
+    margin-top: -2px;
 
     border: none;
+
+    & * + * {
+      margin-left: 22px;
+    }
   }
 }
 
@@ -44,11 +45,28 @@
   &:focus .social-nav__svg {
     fill: @color-main;
   }
+
+  @media @tablet {
+    width: 33px;
+
+    &--vk {
+      height: 17px;
+    }
+
+    &--instagram {
+      height: 24px;
+    }
+
+    &--facebook {
+      height: 28px;
+    }
+  }
 }
 
 .social-nav__svg {
   width: 100%;
   height: 100%;
+
   fill: rgb(102, 102, 102);
 
   &:active {
