@@ -30,6 +30,8 @@
 .contact-user-form__wrap {
   .form-wrap();
 
+  position: relative;
+
   @media @tablet {
     padding-right: 5.65%;
     padding-left: 5.65%;
@@ -43,6 +45,13 @@
       margin: 0;
     }
   }
+}
+
+.contact-user-form__svg {
+  position: absolute;
+  right: 20px;
+
+  fill: @text-dark * 2;
 }
 
 .contact-user-form__label {
@@ -64,20 +73,6 @@
 .contact-user-form__input {
   padding-right: 16px;
   padding-left: 15px;
-
-  &[id="user-email"] {
-    background: url("../../img/icon-mail.svg") no-repeat right center;
-    background-size: 18px 13px;
-    background-origin: content-box;
-  }
-
-  &[id="user-tel"] {
-    padding-right: 13px;
-
-    background: url("../../img/icon-phone.svg") no-repeat right center;
-    background-size: 21px 21px;
-    background-origin: content-box;
-  }
 
   @media @tablet {
     padding-left: 20px;

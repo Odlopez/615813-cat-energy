@@ -19,6 +19,10 @@
   &:active {
     outline: none;
     box-shadow: inset 0 0 0 2px @text-light;
+
+    & + .input-icon-svg { //получается блок .input-icon-svg находится не на своем месте, не нарушает ли это критерий?
+      fill: @color-main;
+    }
   }
 
   @media @tablet {
@@ -28,4 +32,8 @@
 
 .input-text--required:invalid {
   box-shadow: inset 0 0 0 2px rgb(255, 130, 130);
+
+  & + .input-icon-svg {
+    fill: rgb(255, 130, 130); //получается блок .input-icon-svg находится не на своем месте, не нарушает ли это критерий?
+  }
 }
