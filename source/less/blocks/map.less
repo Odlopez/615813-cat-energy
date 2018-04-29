@@ -4,15 +4,37 @@
   height: 360px;
   overflow-y: hidden;
 
-  background-image: url("../img/bg-map-mobile@1x.png");
+  background: url("../img/bg-map-mobile@1x.png") no-repeat center;
   background-repeat: no-repeat;
+  background-size: auto 100%;
+
+  @media @retina {
+    background-image: url("../img/bg-map-mobile@2x.png");
+  }
 
   @media @tablet {
     height: 397px;
+
+    background-image: url("../img/bg-map-tablet@1x.png");
+
+    @media @retina {
+      background-image: url("../img/bg-map-tablet@2x.png");
+    }
+  }
+
+  @media @desktop {
+    background-image: url("../img/bg-map-desktop@1x.png");
+
+    @media @retina {
+      background-image: url("../img/bg-map-desktop@2x.png");
+    }
   }
 }
 
 .map__image {
   position: absolute;
+  right: 50%;
   z-index: -1;
+
+  transform: translateX(50%);
 }

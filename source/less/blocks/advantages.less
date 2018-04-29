@@ -82,7 +82,7 @@
 
   @media @desktop {
     width: @cell-d;
-    margin-bottom: 38px;
+    margin-bottom: 20px;
     padding: 110px 0 50px;
   }
 
@@ -112,17 +112,37 @@
 
   &:first-child::before {
     background-image: url("../img/advantage-leaf@1x.png");
+
+    @media @retina {
+      background-image: url("../img/advantage-leaf@2x.png");
+      background-size: 50px 50px;
+    }
   }
 
   &:nth-child(2)::before {
     background-image: url("../img/advantage-powder@1x.png");
+
+    @media @retina {
+      background-image: url("../img/advantage-powder@2x.png");
+      background-size: 50px 50px;
+    }
   }
 
   &:nth-child(3)::before {
     background-image: url("../img/advantage-dining@1x.png");
+
+    @media @retina {
+      background-image: url("../img/advantage-dining@2x.png");
+      background-size: 50px 50px;
+    }
   }
 
   &:nth-child(4)::before {
     background-image: url("../img/advantage-clock@1x.png");
+
+    @media @retina {
+      background-image: url("../img/advantage-clock@2x.png");
+      background-size: 50px 50px;
+    }
   }
 }

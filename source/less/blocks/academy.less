@@ -2,11 +2,10 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 100%;
   min-height: 80px;
 
   @media @tablet {
-    width: 162px;
+    justify-content: flex-end;
   }
 }
 
@@ -21,6 +20,18 @@
   }
 }
 
+.academy__link {
+  &:hover .academy__logo,
+  &:focus .academy__logo,
+  &:active .academy__logo {
+    fill: @color-main;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
 .academy__logo {
   display: block;
   width: 28px;
@@ -28,13 +39,7 @@
 
   fill: rgb(102, 102, 102);
 
-  &:hover,
-  &focus,
-  &:active {
-    fill: @color-main;
-  }
-
-  &:active {
-    opacity: 0.3;
+  @media @tablet {
+    margin-left: 23px;
   }
 }

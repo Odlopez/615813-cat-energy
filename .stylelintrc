@@ -8,6 +8,7 @@
   },
 
   "ignoreFiles": [
-    "source/less/normalize.less"
+    "source/less/normalize.less",
+    "source/js/picturefill.min.js"
   ]
 }
