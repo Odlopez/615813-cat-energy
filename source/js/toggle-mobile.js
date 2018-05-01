@@ -3,6 +3,7 @@ const toggleSlider = document.querySelector(".toggle__slider");
 const wrapImage = document.querySelector(".example__image-wrap");
 const buttonCatBefore = document.querySelector(".toggle__label--before");
 const buttonCatAfter = document.querySelector(".toggle__label--after");
+const body = document.querySelector("body");
 
 //Проверяем, если расширение экрана - мобильное, и на данный момент худой кот видим, открываем толстого и скрываем худого.
 buttonCatBefore.addEventListener("click", function () {
@@ -22,4 +23,13 @@ function toggle (bool) {
     toggleSlider.classList.toggle("js-slide-right");
   }
 }
-//Еще нужно придумать, как удалять эти js-классы, если в одном сеансе перешли с мобильного на другое расширение экрана.
+
+//удаляет js-классы, если в одном сеансе перешли с мобильного на другое расширение экрана.
+window.addEventListener("resize", function () {
+  const width = window.innerWidth;
+  if (width > 767) {
+    wrapImage.classList.remove("js-visible");
+    catBefore.classList.remove("js-hidden");
+    toggleSlider.classList.remove("js-slide-right");
+  }
+})

@@ -49,9 +49,16 @@
 
 .contact-user-form__svg {
   position: absolute;
+  top: 50%;
   right: 20px;
 
+  transform: translateY(-50%);
+
   fill: @text-dark * 2;
+
+  @media @tablet-only {
+    right: calc(5.65% ~"+ 20px");
+  }
 }
 
 .contact-user-form__label {
