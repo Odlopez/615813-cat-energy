@@ -21,24 +21,24 @@
 }
 
 .footer__logo-link {
-  min-height: 96px;
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
+  min-height: 96px;
 
-  &:hover,
-  &:focus {
+  &:hover .footer__logo-svg,
+  &:focus .footer__logo-svg {
     opacity: 0.8;
   }
 
-  &:active {
+  &:active .footer__logo-svg {
     opacity: 0.6;
   }
 
   @media @tablet {
+    justify-content: flex-start;
     width: @cell-t + @small-cell-t * 2;
     margin-bottom: 0;
-    justify-content: flex-start;
   }
 
   @media @desktop {

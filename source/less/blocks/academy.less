@@ -10,34 +10,49 @@
 }
 
 .academy__name {
+  order: 1;
+
   font-size: 16px;
   line-height: 16px;
   font-family: @font-extra;
   color: @text-light;
-
-  &:active {
-    opacity: 0.3;
-  }
 }
 
 .academy__link {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+
   &:hover .academy__logo,
   &:focus .academy__logo,
   &:active .academy__logo {
     fill: @color-main;
   }
 
-  &:active {
+  &:active .academy__logo,
+  &:active .academy__name {
     opacity: 0.3;
+  }
+
+  @media @tablet {
+    justify-content: flex-end;
   }
 }
 
 .academy__logo {
   display: block;
+  order: 2;
   width: 28px;
   height: 35px;
 
   fill: rgb(102, 102, 102);
+
+  &:active,
+  &:active + .academy__name {
+    // для более адекватного срабатывания в IE
+    opacity: 0.3;
+  }
 
   @media @tablet {
     margin-left: 23px;
