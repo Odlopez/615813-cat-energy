@@ -9,6 +9,7 @@ var server = require("browser-sync").create();
 var posthtml = require("gulp-posthtml");
 var include = require("posthtml-include");
 const gulpBemCss = require('gulp-bem-css');
+const webp = require('gulp-webp');
 
 gulp.task("style", function() {
   gulp.src("source/less/style.less")
@@ -49,4 +50,10 @@ gulp.task('bem-less', () => {
       modifierSeparator: '--'
     }))
     .pipe(gulp.dest('source/css/f'));
+});
+
+gulp.task('webp', () => {
+  return gulp.src('source/img/*.png')
+    .pipe(webp())
+    .pipe(gulp.dest('source/webp'))
 });
