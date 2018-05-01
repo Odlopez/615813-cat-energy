@@ -60,7 +60,7 @@ gulp.task('webp', () => {
 });
 
 gulp.task('svg-optim', function () {
-  return gulp.src('source/img/*.svg')
+  return gulp.src('source/img/logo-mobile.svg')
       .pipe(svgmin())
       .pipe(gulp.dest('source/svgo'));
 });
