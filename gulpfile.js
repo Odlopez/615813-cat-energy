@@ -8,9 +8,17 @@ var autoprefixer = require("autoprefixer");
 var server = require("browser-sync").create();
 var posthtml = require("gulp-posthtml");
 var include = require("posthtml-include");
-const gulpBemCss = require('gulp-bem-css');
-const webp = require('gulp-webp');
+var gulpBemCss = require('gulp-bem-css');
+var webp = require('gulp-webp');
 var svgmin = require('gulp-svgmin');
+var runSequence = require('run-sequence');
+var rename = require("gulp-rename");
+var del = require('del');
+var minify = require('gulp-csso');
+var svgstore = require('gulp-svgstore');
+var svgmin = require('gulp-svgmin');
+var path = require('path');
+var imagemin = require('gulp-imagemin');
 
 gulp.task("style", function() {
   gulp.src("source/less/style.less")
@@ -20,7 +28,10 @@ gulp.task("style", function() {
       autoprefixer()
     ]))
     .pipe(gulp.dest("source/css"))
-    .pipe(server.stream());
+    // .pipe(server.stream());
+    .pipe(minify())
+    .pipe(rename("style.min.css"))
+    .pipe(gulp.dest("source/css"));
 });
 
 gulp.task("serve", ["style"], function() {
@@ -61,6 +72,16 @@ gulp.task('webp', () => {
 
 gulp.task('svg-optim', function () {
   return gulp.src('source/img/logo-mobile.svg')
-      .pipe(svgmin())
-      .pipe(gulp.dest('source/svgo'));
+    .pipe(svgmin())
+    .pipe(gulp.dest('source/svgo'));
 });
+
+gulp.task("images-min", function () {
+  return gulp.src("source/img/**/*.{png,jpg,svg}")
+    .pipe(imagemin([
+      imagemin.optipng({optimizationLevel: 3}),
+      imagemin.jpegtran({progressive: true}),
+      imagemin.svgo()
+    ]))
+    .pipe(gulp.dest("source/img"));
+})
