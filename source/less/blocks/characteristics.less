@@ -13,6 +13,17 @@
 .characteristics__title {
   padding: 20px 40% 12px 0;
 
+  @media @tablet {
+    margin-bottom: 23px;
+    padding: 0 22%;
+  }
+
+  @media @desktop {
+    padding: 0 10%;
+  }
+}
+
+.characteristics__link {
   font-size: 16px;
   line-height: 20px;
   font-family: @font-main;
@@ -21,15 +32,8 @@
   text-transform: uppercase;
 
   @media @tablet {
-    margin-bottom: 23px;
-    padding: 0 22%;
-
     font-size: 20px;
     text-align: center;
-  }
-
-  @media @desktop {
-    padding: 0 10%;
   }
 }
 
