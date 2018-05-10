@@ -14,21 +14,11 @@
   background-size: cover;
   background-origin: content-box;
 
-  @media @retina {
-    background-image: url("../img/gift-photo-mobile@2x.jpg"),
-      linear-gradient(to top, @color-main, @color-main);
-  }
-
   @media @tablet-only {
     min-height: 200px;
 
     background-image: url("../img/gift-photo-tablet@1x.jpg"),
       linear-gradient(to top, @color-main, @color-main);
-
-    @media @retina {
-      background-image: url("../img/gift-photo-tablet@2x.jpg"),
-        linear-gradient(to top, @color-main, @color-main);
-    }
   }
 
   @media @desktop {
@@ -37,8 +27,18 @@
 
     background-image: url("../img/gift-photo-desktop@1x.jpg"),
       linear-gradient(to top, @color-main, @color-main);
+  }
 
-    @media @retina {
+  @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+    background-image: url("../img/gift-photo-mobile@2x.jpg"),
+      linear-gradient(to top, @color-main, @color-main);
+
+    @media @tablet-only {
+      background-image: url("../img/gift-photo-tablet@2x.jpg"),
+        linear-gradient(to top, @color-main, @color-main);
+    }
+
+    @media @desktop {
       background-image: url("../img/gift-photo-desktop@2x.jpg"),
         linear-gradient(to top, @color-main, @color-main);
     }
