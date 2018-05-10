@@ -16,7 +16,7 @@ window.addEventListener("resize", function () {
     mainMenu.classList.add("js-hidden");
   }
   if (width > 767) {
-    mainMenu.classList.remove("js-hidden", "js-menu-open");
+    mainMenu.classList.remove("js-hidden");
     buttonMenu.classList.remove("js-button-close");
   }
 })
@@ -27,6 +27,6 @@ buttonMenu.addEventListener("click", function (evt) {
   var width = window.innerWidth;
   if (width < 768) {
     buttonMenu.classList.toggle("js-button-close");
-    mainMenu.classList.toggle("js-menu-open");
+    mainMenu.classList.toggle("js-hidden");
   }
 })
