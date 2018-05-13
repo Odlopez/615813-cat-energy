@@ -8,8 +8,38 @@
     padding: 0;
   }
 
+  &--capital-block {
+    background: url("../img/index-background-mobile@1x.jpg") no-repeat top;
+    background-size: 320px 305px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: -1;
+
+      width: 100%;
+      height: 305px;
+
+      background-image: linear-gradient(to bottom, rgb(100, 168, 59) 0, rgb(100, 168, 59) 305px, transparent 305px);
+    }
+
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+      background-image: url("../img/index-background-mobile@2x.jpg");
+    }
+  }
+
   @media @tablet {
     padding: 0 @indent-tablet;
+
+    &--capital-block {
+      background: none;
+
+      &::before {
+        content: none;
+      }
+    }
   }
 
   @media @desktop {

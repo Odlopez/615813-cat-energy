@@ -48,7 +48,7 @@
 .action__link {
   display: block;
   width: 170px;
-  margin-top: auto;
+  margin-top: 187px;
   margin-bottom: 45px;
 
   font-size: 16px;
@@ -71,16 +71,18 @@
   }
 
   @media @tablet-only {
+    margin-top: 71px;
     margin-right: 114px;
-    margin-bottom: auto;
+    margin-bottom: 71px;
     margin-left: auto;
 
     text-align: left;
 
     &::before {
+      top: 50%;
       left: 90px;
 
-      transform: translateX(0);
+      transform: translate(0, -50%);
     }
   }
 }

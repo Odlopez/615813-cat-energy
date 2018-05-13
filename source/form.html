@@ -52,7 +52,7 @@
       <section class="program-selection">
         <div class="container">
           <h2 class="program-selection__title">Подбор программы</h2>
-          <p class="program-selection__decription">Заполните анкету и мы подберем  программу питания для вашего кота</p>
+          <p class="program-selection__description">Заполните анкету и мы подберем  программу питания для вашего кота</p>
         </div>
         <!-- form -->
         <form class="program-selection__form form" action="https://echo.htmlacademy.ru" method="post">
@@ -75,15 +75,15 @@
             <!-- program-form -->
             <fieldset class="form__item program-form">
               <div class="program-form__wrap">
-                <input class="visuallyhidden" type="radio" id="slim-program" name="program" value="slim-program" checked>
+                <input class="visuallyhidden program-form__input" type="radio" id="slim-program" name="program" value="slim-program" checked>
                 <label class="program-form__label label" for="slim-program">похудение</label>
               </div>
               <div class="program-form__wrap">
-                <input class="visuallyhidden" type="radio" id="pro-program" name="program" value="pro-program">
+                <input class="visuallyhidden program-form__input" type="radio" id="pro-program" name="program" value="pro-program">
                 <label class="program-form__label label" for="pro-program">набор массы</label>
               </div>
               <div class="program-form__wrap">
-                <input class="visuallyhidden" type="radio" id="unknow-program" name="program" value="unknow-program">
+                <input class="visuallyhidden program-form__input" type="radio" id="unknow-program" name="program" value="unknow-program">
                 <label class="program-form__label label" for="unknow-program">не знаю (нужен ваш совет)</label>
               </div>
             </fieldset>
@@ -119,18 +119,19 @@
               <textarea class="feed-back-form__text input-text" name="feed-back" id="feed-back" cols="30" rows="10" placeholder="Расскажите обо всех повадках кота"></textarea>
             </div>
           </fieldset>
+          <!-- extra-product-form -->
           <fieldset class="form__item extra-product-form">
             <legend class="extra-product-form__wrap-legend wrap-legend">
               <span  class="extra-product-form__legend legend">Дополнительно</span>
             </legend>
             <div class="container extra-product-form__container">
-              <input class="visuallyhidden" type="checkbox" id="sweetener" name="sweetener" checked>
+              <input class="visuallyhidden extra-product-form__input" type="checkbox" id="sweetener" name="sweetener" checked>
               <label class="extra-product-form__label label" for="sweetener">Сахарозаменитель</label>
-              <input class="visuallyhidden" type="checkbox" id="water" name="water">
+              <input class="visuallyhidden extra-product-form__input" type="checkbox" id="water" name="water">
               <label class="extra-product-form__label label" for="water">Питьевая вода</label>
-              <input class="visuallyhidden" type="checkbox" id="milk" name="milk">
+              <input class="visuallyhidden extra-product-form__input" type="checkbox" id="milk" name="milk">
               <label class="extra-product-form__label label" for="milk">Молоко</label>
-              <input class="visuallyhidden" type="checkbox" id="vitamins" name="vitamins">
+              <input class="visuallyhidden extra-product-form__input" type="checkbox" id="vitamins" name="vitamins">
               <label class="extra-product-form__label label" for="vitamins">Витамины</label>
             </div>
           </fieldset>
